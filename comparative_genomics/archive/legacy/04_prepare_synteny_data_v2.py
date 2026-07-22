@@ -84,11 +84,11 @@ def main():
     
     # 定义物种和GFF文件
     species_gff = {
-        'BH': f'{base_dir}/annotation/BH/structure/BH_genes.gff3',
-        'CK': f'{base_dir}/annotation/CK/structure/CK_genes.gff3',
-        'TAU': f'{base_dir}/results/C02/tau.gff3',
-        'TCH': f'{base_dir}/results/C03/Tchinensis.gff3',
-        'RSO': f'{base_dir}/results/C01/hs.chrom.genome.gff',
+        'T01': f'{base_dir}/annotation/T01/structure/T01_genes.gff3',
+        'T02': f'{base_dir}/annotation/T02/structure/T02_genes.gff3',
+        'C02': f'{base_dir}/results/C02/C02.gff3',
+        'C03': f'{base_dir}/results/C03/C03.gff3',
+        'C01': f'{base_dir}/results/C01/hs.chrom.genome.gff',
     }
     
     print("=" * 60)

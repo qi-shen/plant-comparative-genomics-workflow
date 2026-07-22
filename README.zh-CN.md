@@ -2,9 +2,9 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-通用、**物种脱敏**的植物基因组注释与多物种比较基因组流程模板。
+通用、可复用的植物基因组注释与多物种比较基因组流程模板（数据与配置由本地提供）。
 
-本仓库只跟踪**脚本、配置模板与文档**；基因组、转录组、OrthoFinder 结果等大数据不入库。公开文档仅使用样本编号（`T` / `C` / `O`），不含真实物种名。
+本仓库只跟踪**脚本、配置模板与文档**；基因组、转录组、OrthoFinder 结果等大数据不入库，使仓库保持为轻量、可移植的模板。样本编号（`T` / `C` / `O`）为模板占位符，真实数据在本地配置中映射。
 
 > GitHub 默认展示英文主文档 [`README.md`](README.md)；本页为完整中文说明。
 
@@ -82,7 +82,7 @@ bash annotation/scripts/run_pasa_update.sh
 | `C01`–`C11` | 比较物种 |
 | `O01`–`O02` | 外群 |
 
-真实文件名与绝对路径只写在本地 `config/species.csv` / `.project_env`，不要提交到公开仓库。
+在本地 `config/species.csv` / `.project_env` 中把每个编号映射到真实物种与路径即可，脚本从中读取映射，而非写死在代码里。
 
 ## 软件依赖
 
@@ -104,9 +104,11 @@ bash annotation/scripts/run_pasa_update.sh
 - [命令速查](CLAUDE.zh-CN.md)
 - [初始化指南](old_reults/README_INIT.zh-CN.md)
 
-## 隐私
+## 配置与数据
 
-公开仓库已做脱敏。数据与真实物种对照表请与本流程仓库分开传输。
+物种与路径映射、机器相关设置都放在本地配置（`config/species.csv`、`.project_env`，
+均已 gitignore），使跟踪的代码保持可移植、与具体数据解耦。用本仓库对流程做版本
+管理；基因组、注释与结果保存在你自己的数据存储中。
 
 ## License
 

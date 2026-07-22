@@ -42,7 +42,7 @@ Holds archived scripts, annotation pipeline, and roots for results/logs/tools. `
 
 ### 1.6 Privacy claims vs content mismatch
 
-Docs claim T/C/O-only IDs, but **132** scripts still hit `BH/CK/目标种` or identifiable filenames. Must be closed before treating the public story as accurate.
+Docs claim T/C/O-only IDs, but **132** scripts still hit `T01/T02/目标种` or identifiable filenames. Must be closed before treating the public story as accurate.
 
 ### 1.7 No config-driven design / shared helpers
 

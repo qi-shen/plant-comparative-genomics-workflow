@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 # 统一修复7个补充图问题:
-# #1-2: 共线性 anchors 条形图/热图 — TCH数据从 tch_fix 目录读取
+# #1-2: 共线性 anchors 条形图/热图 — C03数据从 tch_fix 目录读取
 # #3:   CAFE热图 — 改为Top30, 增大字体
 # #4:   Ks汇总图 — 添加Mean/Median图例
 # #5-7: 正选择图表 — 过滤 omega=999 极端值

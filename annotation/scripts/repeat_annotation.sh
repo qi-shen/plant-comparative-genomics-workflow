@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# T01/CK重复序列注释脚本
+# T01/T02重复序列注释脚本
 # RepeatModeler和RepeatMasker
 
 set -e

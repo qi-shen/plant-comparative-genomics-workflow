@@ -155,13 +155,13 @@ main() {
     
     log_info "EVM版本: $($EVM --version 2>&1 | grep -o 'v[0-9.]*' || echo 'unknown')"
     
-    # 处理BH
-    process_species "T01" || log_error "BH处理失败"
+    # 处理T01
+    process_species "T01" || log_error "T01处理失败"
     
     echo ""
     
-    # 处理CK
-    process_species "T02" || log_error "CK处理失败"
+    # 处理T02
+    process_species "T02" || log_error "T02处理失败"
     
     log_info ""
     log_info "=========================================="

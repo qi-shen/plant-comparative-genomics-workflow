@@ -30,7 +30,7 @@ echo ""
 
 # 检查tblastn结果
 echo "【tblastn比对结果】"
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     for ref in hongsha ganmeng chinensis; do
         tblastn_file="${ANNOTATION_DIR}/${species}/structure/gemoma/${ref}/${ref}_tblastn.txt"
@@ -48,7 +48,7 @@ echo ""
 
 # 检查GeMoMa输出
 echo "【GeMoMa预测输出】"
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     for ref in hongsha ganmeng chinensis; do
         gemoma_dir="${ANNOTATION_DIR}/${species}/structure/gemoma/${ref}"

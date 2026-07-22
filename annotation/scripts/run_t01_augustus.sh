@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 重新运行BH Augustus预测
+# 重新运行T01 Augustus预测
 
 set -e
 
@@ -44,7 +44,7 @@ log_warn() {
 # 主函数
 main() {
     log_info "=========================================="
-    log_info "重新运行BH Augustus基因预测"
+    log_info "重新运行T01 Augustus基因预测"
     log_info "时间: $(date)"
     log_info "=========================================="
     

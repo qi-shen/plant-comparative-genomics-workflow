@@ -132,9 +132,9 @@ def main():
     
     # 定义物种对
     pairs = [
-        ("BH", "CK", f"{synteny_dir}/BH.CK.anchors"),
-        ("BH", "TAU", f"{synteny_dir}/BH.TAU.anchors"),
-        ("CK", "TAU", f"{synteny_dir}/CK.TAU.anchors"),
+        ("T01", "T02", f"{synteny_dir}/T01.T02.anchors"),
+        ("T01", "C02", f"{synteny_dir}/T01.C02.anchors"),
+        ("T02", "C02", f"{synteny_dir}/T02.C02.anchors"),
     ]
     
     total_pairs = 0

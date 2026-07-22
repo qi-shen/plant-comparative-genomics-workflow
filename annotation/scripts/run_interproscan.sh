@@ -139,7 +139,7 @@ main() {
         exit 1
     fi
     
-    # 处理BH和CK
+    # 处理T01和T02
     run_interproscan "T01"
     echo ""
     run_interproscan "T02"

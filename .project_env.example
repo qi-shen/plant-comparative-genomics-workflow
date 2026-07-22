@@ -1,5 +1,5 @@
 # Comparative genomics workflow - local environment (DO NOT commit real paths/names)
-# 比较基因组流程 - 本机环境（勿提交真实路径/种名）
+# 比较基因组流程 - 本机环境（本地配置，已 gitignore）
 #
 #   cp .project_env.example .project_env
 #   edit / 编辑后: source .project_env

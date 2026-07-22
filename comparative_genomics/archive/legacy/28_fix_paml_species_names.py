@@ -60,16 +60,16 @@ def fix_phylip_species_names(phy_file, tree_file):
     phy_species = list(sequences.keys())
     
     # 如果phylip中的物种名与树中的不匹配，需要映射
-    # 假设phylip中的顺序是：CK, TAU, TCH, RSO（缺少BH）
-    # 树中的顺序是：BH, CK, TCH, TAU, RSO
+    # 假设phylip中的顺序是：T02, C02, C03, C01（缺少T01）
+    # 树中的顺序是：T01, T02, C03, C02, C01
     
     # 重新排序和命名
-    if 'BH' not in phy_species:
-        # 需要添加BH或重命名
+    if 'T01' not in phy_species:
+        # 需要添加T01或重命名
         # 检查是否有4个物种
         if len(phy_species) == 4:
-            # 假设顺序是CK, TAU, TCH, RSO
-            # 但树中需要BH, CK, TCH, TAU, RSO
+            # 假设顺序是T02, C02, C03, C01
+            # 但树中需要T01, T02, C03, C02, C01
             # 这里需要从原始CDS文件中重新提取
     
     # 写入修复后的文件

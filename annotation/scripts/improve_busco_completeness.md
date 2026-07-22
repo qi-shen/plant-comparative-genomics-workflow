@@ -2,11 +2,11 @@
 
 ## 当前状态
 
-- **BH样本**: 88.3% Complete (1426/1614)
+- **T01样本**: 88.3% Complete (1426/1614)
   - Fragmented: 7.8% (126)
   - Missing: 3.9% (62)
   
-- **CK样本**: 87.6% Complete (1414/1614)
+- **T02样本**: 87.6% Complete (1414/1614)
   - Fragmented: 8.5% (137)
   - Missing: 3.9% (63)
 
@@ -131,8 +131,8 @@ grep "Missing" "${BUSCO_DIR}/full_table.tsv" | cut -f1 > "${OUTPUT_DIR}/missing_
 #!/bin/bash
 # rerun_annotation_braker2.sh
 
-GENOME="annotation/T01/BH_genome.masked.fa"
-BAM="annotation/T01/transcriptome/BH_merged.bam"
+GENOME="annotation/T01/T01_genome.masked.fa"
+BAM="annotation/T01/transcriptome/T01_merged.bam"
 PROTEINS="databases/uniprot_sprot.fasta"
 OUTPUT="annotation/T01/braker2"
 

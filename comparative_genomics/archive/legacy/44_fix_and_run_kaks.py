@@ -174,8 +174,8 @@ def main():
     print("Ks计算（修复版）")
     print("=" * 60)
     
-    # 只处理BH_CK进行测试
-    pair_dir = os.path.join(base_dir, "BH_CK")
+    # 只处理T01_T02进行测试
+    pair_dir = os.path.join(base_dir, "T01_T02")
     input_file = os.path.join(pair_dir, "kaks_input.fa")
     
     if not os.path.exists(input_file):
@@ -196,7 +196,7 @@ def main():
     
     print(f"处理 {len(pairs)} 对序列...")
     
-    work_base = os.path.join(output_base, "BH_CK", "codeml_test")
+    work_base = os.path.join(output_base, "T01_T02", "codeml_test")
     os.makedirs(work_base, exist_ok=True)
     
     # 准备参数

@@ -124,8 +124,8 @@ main() {
     log_info ""
     log_info "【1/6】C08 - 解压基因组"
     FALLOPIA_DIR="${RESULTS_DIR}/C08"
-    if [ -f "${FALLOPIA_DIR}/AYY_all_genome.fasta.gz" ]; then
-        decompress_file "${FALLOPIA_DIR}/AYY_all_genome.fasta.gz" "$FALLOPIA_DIR"
+    if [ -f "${FALLOPIA_DIR}/C08_genome.fasta.gz" ]; then
+        decompress_file "${FALLOPIA_DIR}/C08_genome.fasta.gz" "$FALLOPIA_DIR"
     else
         log_warn "C08基因组.gz文件不存在，可能已解压"
     fi

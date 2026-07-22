@@ -203,28 +203,28 @@ main() {
     species_data["C01"]="C01:hs.chrom.genome.final.fa:hs.chrom.genome.gff:C01.cds.fa:C01.pep.fa"
     
     # C02
-    species_data["C02"]="C02:tau_genome.fasta:tau.gff3:cds.fa:protein.fa"
+    species_data["C02"]="C02:C02_genome.fasta:C02.gff3:cds.fa:protein.fa"
     
     # C03
     species_data["C03"]="C03:genome.fa:genes.gff3:cds.fa:protein.fa"
     
     # C05
-    species_data["C05"]="C05:0321072RM_v1.fasta:0321072RM_v1.gff3:0321072RM_v1-cds.fasta:0321072RM_v1-prot.fasta"
+    species_data["C05"]="C05:C05.fasta:C05.gff3:C05-cds.fasta:C05-prot.fasta"
     
     # C07
     species_data["C07"]="C07:genome.fa:genes.gff3:cds.fa:protein.fa"
     
     # C04
-    species_data["C04"]="C04/Haplome_1:AmaPa_v01_hap1.fasta:AmaPa_v01.0_hap1_.gff.gff3:C04_hap1.cds.fa.fasta:C04_hap1.proteins.fa.fasta"
+    species_data["C04"]="C04/hap1:C04_hap1.fasta:C04_hap1.gff.gff3:C04_hap1.cds.fa.fasta:C04_hap1.proteins.fa.fasta"
     
     # C08
-    species_data["C08"]="C08:AYY_all_genome.fasta:AYY.gene.rename.gff3:AYY.gene.rename.cds.fa:AYY.gene.rename.pep.fa"
+    species_data["C08"]="C08:C08_genome.fasta:C08.gff3:C08.cds.fa:C08.pep.fa"
     
     # C09
     species_data["C09"]="C09:genome_v2.fasta:genome.gff3:cds.fasta:protein.fasta"
     
     # C10
-    species_data["C10"]="C10:GWHCBIU00000000.genome.fasta:GWHCBIU00000000.gff:GWHCBIU00000000.CDS.fasta:GWHCBIU00000000.Protein.faa"
+    species_data["C10"]="C10:C10.genome.fasta:C10.gff:C10.CDS.fasta:C10.Protein.faa"
     
     # O01
     species_data["O01"]="O01:O01.TAIR10.dna.toplevel.fa:O01.TAIR10.61.gff3:O01.cds.fa:O01.pep.fa"
@@ -236,7 +236,7 @@ main() {
     species_data["C06"]="C06:bxgz.hap1.fa:bxgz.hap1.evm_out.gff3:C06_hap1.cds.fa:C06_hap1.pep.fa"
     
     # C11
-    species_data["C11"]="C11:hap1.fa:hap1.gff3:hap1.CDS.fa:hap1_prot.fa"
+    species_data["C11"]="C11:hap1.fa:hap1.gff3:hap1.CDS.fa:C11_prot.fa"
     
     # 处理所有物种
     local count=0

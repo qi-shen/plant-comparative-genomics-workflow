@@ -13,7 +13,7 @@ BLUE='\033[0;34m'
 NC='\033[0m'
 
 PROJECT_DIR="${PROJECT_ROOT}"
-SPECIES=${1:-"T01"}  # 默认BH，可指定CK
+SPECIES=${1:-"T01"}  # 默认T01，可指定T02
 
 # PASA路径
 PASA_HOME="${PROJECT_ROOT}"

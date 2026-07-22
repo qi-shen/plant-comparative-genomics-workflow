@@ -24,15 +24,15 @@ mkdir -p "$WORKDIR/ks_distribution"
 
 # 定义CDS文件路径
 declare -A CDS_FILES=(
-    ["BH"]="$BASE_DIR/new_anno/BH.final.cds.fa"
-    ["CK"]="$BASE_DIR/new_anno/CK.final.cds.fa"
-    ["TAU"]="$BASE_DIR/old_reults/results/C02/tau.longest_cds.fasta"
-    ["TCH"]="$BASE_DIR/old_reults/results/C03/Tchinensis_cds.fa"
-    ["RSO"]="$BASE_DIR/old_reults/results/C01/C01.cds.fa"
+    ["T01"]="$BASE_DIR/new_anno/T01.final.cds.fa"
+    ["T02"]="$BASE_DIR/new_anno/T02.final.cds.fa"
+    ["C02"]="$BASE_DIR/old_reults/results/C02/C02.longest_cds.fasta"
+    ["C03"]="$BASE_DIR/old_reults/results/C03/C03_cds.fa"
+    ["C01"]="$BASE_DIR/old_reults/results/C01/C01.cds.fa"
 )
 
 # 分析近缘类群5个物种
-for sp in BH CK TAU TCH RSO; do
+for sp in T01 T02 C02 C03 C01; do
     echo ""
     echo "=========================================="
     echo "分析 $sp"

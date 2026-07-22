@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# T01/CK转录组处理脚本
+# T01/T02转录组处理脚本
 # fastp质控、HISAT2比对、StringTie组装
 
 set -e
@@ -226,22 +226,22 @@ main() {
     # 检查工具
     check_tools
     
-    # BH基因组
+    # T01基因组
     local bh_genome="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa"
     if [ -f "$bh_genome" ]; then
         process_species "T01" "$bh_genome"
     else
-        log_error "BH基因组文件不存在: $bh_genome"
+        log_error "T01基因组文件不存在: $bh_genome"
     fi
     
     echo ""
     
-    # CK基因组
+    # T02基因组
     local ck_genome="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa"
     if [ -f "$ck_genome" ]; then
         process_species "T02" "$ck_genome"
     else
-        log_error "CK基因组文件不存在: $ck_genome"
+        log_error "T02基因组文件不存在: $ck_genome"
     fi
     
     log_info ""

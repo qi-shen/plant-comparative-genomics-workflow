@@ -30,11 +30,11 @@ def main():
     
     # CDS文件
     cds_files = {
-        'BH': f"{work_dir}/BH.cds.fa",
-        'CK': f"{work_dir}/CK.cds.fa",
-        'TAU': f"{work_dir}/TAU.cds.fa",
-        'TCH': f"{work_dir}/TCH.cds.fa",
-        'RSO': f"{work_dir}/RSO.cds.fa",
+        'T01': f"{work_dir}/T01.cds.fa",
+        'T02': f"{work_dir}/T02.cds.fa",
+        'C02': f"{work_dir}/C02.cds.fa",
+        'C03': f"{work_dir}/C03.cds.fa",
+        'C01': f"{work_dir}/C01.cds.fa",
     }
     
     # 读取核心单拷贝基因列表

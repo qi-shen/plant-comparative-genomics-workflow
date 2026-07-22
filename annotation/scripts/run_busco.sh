@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # BUSCO评估脚本
-# 对所有比较物种和BH/CK进行BUSCO评估
+# 对所有比较物种和T01/T02进行BUSCO评估
 
 set -e
 
@@ -125,30 +125,30 @@ main() {
     
     # 比较物种
     species_genomes["C01"]="${RESULTS_DIR}/C01/hs.chrom.genome.final.fa"
-    species_genomes["C02"]="${RESULTS_DIR}/C02/tau_genome.fasta"
+    species_genomes["C02"]="${RESULTS_DIR}/C02/C02_genome.fasta"
     species_genomes["C03"]="${RESULTS_DIR}/C03/genome.fa"
-    species_genomes["C04"]="${RESULTS_DIR}/C04/Haplome_1/AmaPa_v01_hap1.fasta"
-    species_genomes["C05"]="${RESULTS_DIR}/C05/0321072RM_v1.fasta"
+    species_genomes["C04"]="${RESULTS_DIR}/C04/hap1/C04_hap1.fasta"
+    species_genomes["C05"]="${RESULTS_DIR}/C05/C05.fasta"
     species_genomes["C06"]="${RESULTS_DIR}/C06/bxgz.hap1.fa"
     species_genomes["C07"]="${RESULTS_DIR}/C07/genome.fa"
-    species_genomes["C08"]="${RESULTS_DIR}/C08/AYY_all_genome.fasta"
+    species_genomes["C08"]="${RESULTS_DIR}/C08/C08_genome.fasta"
     species_genomes["C09"]="${RESULTS_DIR}/C09/genome_v2.fasta"
-    species_genomes["C10"]="${RESULTS_DIR}/C10/GWHCBIU00000000.genome.fasta"
+    species_genomes["C10"]="${RESULTS_DIR}/C10/C10.genome.fasta"
     species_genomes["O01"]="${RESULTS_DIR}/O01/O01.TAIR10.dna.toplevel.fa"
     species_genomes["O02"]="${RESULTS_DIR}/O02/PN40024.T21.fa"
     species_genomes["C11"]="${RESULTS_DIR}/C11/hap1.fa"
     
-    # BH和CK（如果已解压）
+    # T01和T02（如果已解压）
     if [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa" ]; then
         species_genomes["T01"]="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa"
     elif [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa.gz" ]; then
-        log_warn "BH基因组未解压，跳过"
+        log_warn "T01基因组未解压，跳过"
     fi
     
     if [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa" ]; then
         species_genomes["T02"]="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa"
     elif [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa.gz" ]; then
-        log_warn "CK基因组未解压，跳过"
+        log_warn "T02基因组未解压，跳过"
     fi
     
     # 运行BUSCO评估

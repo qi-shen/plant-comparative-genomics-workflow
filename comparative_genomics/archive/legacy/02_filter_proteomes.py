@@ -34,8 +34,8 @@ def parse_fasta(filename):
 def get_gene_id(seq_id):
     """从转录本ID提取基因ID"""
     # 处理各种格式
-    # BH_BH01G000001.1 -> BH_BH01G000001
-    # ATH_transcript:AT1G01010.1 -> ATH_transcript:AT1G01010
+    # T01_T0101G000001.1 -> T01_T0101G000001
+    # O01_transcript:GENE00010.1 -> O01_transcript:GENE00010
     parts = seq_id.rsplit('.', 1)
     if len(parts) == 2 and parts[1].isdigit():
         return parts[0]
@@ -107,8 +107,8 @@ def main():
     print("过滤蛋白质序列")
     print("=" * 60)
     
-    species_list = ['BH', 'CK', 'TAU', 'TCH', 'RSO', 'CQU', 'GPA', 
-                    'APA', 'FMU', 'HAM', 'POL', 'DCA', 'SMO', 'ATH', 'VVI']
+    species_list = ['T01', 'T02', 'C02', 'C03', 'C01', 'C05', 'C07', 
+                    'C04', 'C08', 'C09', 'C10', 'C06', 'C11', 'O01', 'O02']
     
     all_stats = []
     

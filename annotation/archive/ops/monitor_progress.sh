@@ -13,35 +13,35 @@ echo ""
 
 echo "【转录组处理】"
 echo "---"
-if [ -d "${ANNOTATION_DIR}/BH/transcriptome" ]; then
-    echo "BH转录组文件:"
-    ls -lh "${ANNOTATION_DIR}/BH/transcriptome/" 2>/dev/null | grep -E "\.(fq|bam|gtf)" | wc -l && echo "个文件"
+if [ -d "${ANNOTATION_DIR}/T01/transcriptome" ]; then
+    echo "T01转录组文件:"
+    ls -lh "${ANNOTATION_DIR}/T01/transcriptome/" 2>/dev/null | grep -E "\.(fq|bam|gtf)" | wc -l && echo "个文件"
 else
-    echo "BH转录组处理尚未开始"
+    echo "T01转录组处理尚未开始"
 fi
 
-if [ -d "${ANNOTATION_DIR}/CK/transcriptome" ]; then
-    echo "CK转录组文件:"
-    ls -lh "${ANNOTATION_DIR}/CK/transcriptome/" 2>/dev/null | grep -E "\.(fq|bam|gtf)" | wc -l && echo "个文件"
+if [ -d "${ANNOTATION_DIR}/T02/transcriptome" ]; then
+    echo "T02转录组文件:"
+    ls -lh "${ANNOTATION_DIR}/T02/transcriptome/" 2>/dev/null | grep -E "\.(fq|bam|gtf)" | wc -l && echo "个文件"
 else
-    echo "CK转录组处理尚未开始"
+    echo "T02转录组处理尚未开始"
 fi
 
 echo ""
 echo "【重复序列注释】"
 echo "---"
-if [ -d "${ANNOTATION_DIR}/BH/repeat" ]; then
-    echo "BH重复序列文件:"
-    ls -lh "${ANNOTATION_DIR}/BH/repeat/" 2>/dev/null | head -5
-    if [ -f "${ANNOTATION_DIR}/BH/repeat/repeatmodeler.log" ]; then
+if [ -d "${ANNOTATION_DIR}/T01/repeat" ]; then
+    echo "T01重复序列文件:"
+    ls -lh "${ANNOTATION_DIR}/T01/repeat/" 2>/dev/null | head -5
+    if [ -f "${ANNOTATION_DIR}/T01/repeat/repeatmodeler.log" ]; then
         echo "RepeatModeler日志最后几行:"
-        tail -5 "${ANNOTATION_DIR}/BH/repeat/repeatmodeler.log" 2>/dev/null
+        tail -5 "${ANNOTATION_DIR}/T01/repeat/repeatmodeler.log" 2>/dev/null
     fi
 fi
 
-if [ -d "${ANNOTATION_DIR}/CK/repeat" ]; then
-    echo "CK重复序列文件:"
-    ls -lh "${ANNOTATION_DIR}/CK/repeat/" 2>/dev/null | head -5
+if [ -d "${ANNOTATION_DIR}/T02/repeat" ]; then
+    echo "T02重复序列文件:"
+    ls -lh "${ANNOTATION_DIR}/T02/repeat/" 2>/dev/null | head -5
 fi
 
 echo ""

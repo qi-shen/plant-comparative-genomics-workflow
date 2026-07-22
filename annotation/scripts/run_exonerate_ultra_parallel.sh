@@ -285,7 +285,7 @@ main() {
         exit 1
     fi
     
-    # 处理BH和CK（串行，但内部高度并行）
+    # 处理T01和T02（串行，但内部高度并行）
     process_species "T01"
     process_species "T02"
     

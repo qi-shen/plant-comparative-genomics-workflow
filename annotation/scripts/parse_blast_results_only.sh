@@ -81,7 +81,7 @@ main() {
     
     cd "$PROJECT_DIR"
     
-    # 解析BH和CK的SwissProt结果
+    # 解析T01和T02的SwissProt结果
     parse_blast_results "T01" "swissprot"
     echo ""
     parse_blast_results "T02" "swissprot"

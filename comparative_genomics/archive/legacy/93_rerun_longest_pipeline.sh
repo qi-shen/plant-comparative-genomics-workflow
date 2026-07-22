@@ -13,7 +13,7 @@ OF_OUT="$BASE/02_orthofinder_results_longest"
 if [ -d "$OF_OUT" ]; then
   mv "$OF_OUT" "${OF_OUT}_backup_$(date +%Y%m%d_%H%M%S)"
 fi
-python "/home/shenq/Biosofts/OrthoFinder_source/orthofinder.py" \
+python "${HOME}/Biosofts/OrthoFinder_source/orthofinder.py" \
   -f "$BASE/01_proteomes_longest" \
   -t 120 -a 64 -S diamond -M msa \
   -o "$OF_OUT" | tee "$LOGDIR/orthofinder_longest_$(date +%Y%m%d_%H%M%S).log"

@@ -28,12 +28,12 @@ palette14 <- c(
   "#8B0000", "#ADD8E6"
 )
 
-species_order <- c("BH", "CK", "TAU", "TCH", "RSO",
-                   "APA", "ATH", "CQU", "DCA", "FMU", "GPA", "HAM", "POL", "SMO", "VVI")
+species_order <- c("T01", "T02", "C02", "C03", "C01",
+                   "C04", "O01", "C05", "C06", "C08", "C07", "C09", "C10", "C11", "O02")
 species_cn <- c(
-  BH = "BH(目标种BH)", CK = "CK(目标种CK)", TAU = "TAU(C02)", TCH = "TCH(C03)", RSO = "RSO(C01)",
-  APA = "APA(C04)", ATH = "ATH(O01)", CQU = "CQU(C05)", DCA = "DCA(C06)", FMU = "FMU(C08)",
-  GPA = "GPA(C07)", HAM = "HAM(C09)", POL = "POL(C10)", SMO = "SMO(C11)", VVI = "VVI(O02)"
+  T01 = "T01", T02 = "T02", C02 = "C02", C03 = "C03", C01 = "C01",
+  C04 = "C04", O01 = "O01", C05 = "C05", C06 = "C06", C08 = "C08",
+  C07 = "C07", C09 = "C09", C10 = "C10", C11 = "C11", O02 = "O02"
 )
 species_colors <- setNames(rep(palette14, length.out = length(species_order)), species_order)
 
@@ -210,12 +210,12 @@ out02 <- fig_dir("02_系统发育分析", "figures")
 tr <- read.tree(tree_file)
 tip_cols <- rep("black", length(tr$tip.label))
 names(tip_cols) <- tr$tip.label
-tip_cols[names(tip_cols) == "BH"] <- palette14[5]
-tip_cols[names(tip_cols) == "CK"] <- palette14[2]
+tip_cols[names(tip_cols) == "T01"] <- palette14[5]
+tip_cols[names(tip_cols) == "T02"] <- palette14[2]
 
-pdf(file.path(out02, "01_物种树_标注BH_CK.pdf"), width = 10, height = 6)
+pdf(file.path(out02, "01_物种树_标注T01_T02.pdf"), width = 10, height = 6)
 par(mar = c(1, 1, 3, 1))
-plot(tr, cex = 0.8, tip.color = tip_cols, main = "物种系统发育树（BH红 / CK蓝）")
+plot(tr, cex = 0.8, tip.color = tip_cols, main = "物种系统发育树（T01红 / T02蓝）")
 add.scale.bar(length = 0.05, lwd = 2, col = "black")
 dev.off()
 
@@ -258,14 +258,14 @@ p_syn_heat <- ggplot(as.data.frame(syn_mat), aes(x = Sp1, y = Sp2, fill = Pairs)
 save_pdf(p_syn_heat, file.path(out03, "02_共线性anchors_热图.pdf"), width = 8, height = 7)
 
 # ------------------------------------------------------------------------------
-# 04 CAFE：扩张/收缩统计 + 热图 + TCH变化分布
+# 04 CAFE：扩张/收缩统计 + 热图 + C03变化分布
 # ------------------------------------------------------------------------------
 cat("[04] 生成CAFE可视化...\n")
 cafe_sig <- file.path(delivery_dir, "04_基因家族动态分析", "显著变化家族.tsv")
 out04 <- fig_dir("04_基因家族动态分析", "figures")
 
 cafe_dt <- fread(cafe_sig, sep = "\t", header = TRUE)
-sp5 <- c("BH", "CK", "TAU", "TCH", "RSO")
+sp5 <- c("T01", "T02", "C02", "C03", "C01")
 sp_cols <- sapply(sp5, function(sp) {
   x <- grep(paste0("^", sp, "<"), names(cafe_dt), value = TRUE)
   if (length(x) == 0) NA_character_ else x[1]
@@ -307,15 +307,15 @@ p_cafe_net <- ggplot(cafe_stat, aes(x = Species, y = Net, fill = Species)) +
   theme_pub(11)
 save_pdf(p_cafe_net, file.path(out04, "02_CAFE_净变化sum_近缘类群5物种.pdf"), width = 8, height = 6)
 
-# TCH变化分布
-tch_col <- sp_cols[["TCH"]]
+# C03变化分布
+tch_col <- sp_cols[["C03"]]
 p_tch_hist <- ggplot(data.frame(v = cafe_dt[[tch_col]]), aes(x = v)) +
   geom_histogram(bins = 60, fill = palette14[4], color = "white") +
-  labs(title = "TCH 节点变化值分布（CAFE显著家族）", x = "变化值（扩张为正，收缩为负）", y = "家族数") +
+  labs(title = "C03 节点变化值分布（CAFE显著家族）", x = "变化值（扩张为正，收缩为负）", y = "家族数") +
   theme_pub(11)
-save_pdf(p_tch_hist, file.path(out04, "03_TCH变化值分布.pdf"), width = 9, height = 6)
+save_pdf(p_tch_hist, file.path(out04, "03_C03变化值分布.pdf"), width = 9, height = 6)
 
-# 热图：按TCH绝对变化Top100
+# 热图：按C03绝对变化Top100
 abs_order <- order(abs(cafe_dt[[tch_col]]), decreasing = TRUE)
 topm <- cafe_dt[abs_order[1:min(100, nrow(cafe_dt))]]
 hm <- as.data.frame(topm[, ..sp_cols])
@@ -328,9 +328,9 @@ hm_long <- hm %>%
 p_cafe_hm <- ggplot(hm_long, aes(x = Species, y = FamilyID, fill = Delta)) +
   geom_tile() +
   scale_fill_gradient2(low = palette14[2], mid = "white", high = palette14[5], midpoint = 0) +
-  labs(title = "CAFE显著家族变化热图（按TCH绝对变化Top100）", x = NULL, y = NULL) +
+  labs(title = "CAFE显著家族变化热图（按C03绝对变化Top100）", x = NULL, y = NULL) +
   theme_pub(9)
-save_pdf(p_cafe_hm, file.path(out04, "04_CAFE变化热图_TCH_top100.pdf"), width = 8, height = 11)
+save_pdf(p_cafe_hm, file.path(out04, "04_CAFE变化热图_C03_top100.pdf"), width = 8, height = 11)
 
 # ------------------------------------------------------------------------------
 # 05 WGD：Ks统计 + Ks密度对比（使用完整ks_all_results.tsv）

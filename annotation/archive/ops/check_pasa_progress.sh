@@ -3,7 +3,7 @@
 # 检查PASA运行进度
 
 PROJECT_DIR="/path/to/project_root"
-SPECIES=${1:-"BH"}
+SPECIES=${1:-"T01"}
 
 PASA_CONF_DIR="${PROJECT_DIR}/annotation/${SPECIES}/pasa_update"
 LOG_FILE="${PROJECT_DIR}/logs/pasa_update_${SPECIES}_*.log"

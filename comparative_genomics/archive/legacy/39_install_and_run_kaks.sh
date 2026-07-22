@@ -86,6 +86,6 @@ echo "  3. 使用在线工具"
 echo ""
 echo "已准备数据:"
 echo "  - 14,871个有效序列对"
-echo "  - 3个物种对（BH-CK, BH-TAU, CK-TAU）"
+echo "  - 3个物种对（T01-T02, T01-C02, T02-C02）"
 echo "  - 所有序列已格式化"
 

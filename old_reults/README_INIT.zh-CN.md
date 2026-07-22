@@ -1,4 +1,4 @@
-# 项目初始化指南（脱敏）
+# 项目初始化指南
 
 **语言：** [English](README_INIT.en.md) | [中文](README_INIT.zh-CN.md)
 
@@ -28,7 +28,7 @@ source .project_env
 | `RNA_DIR` | 转录组 |
 | `T01_GENOME` / `T02_GENOME` | 目标样本基因组 |
 
-## 隐私
+## 配置与数据
 
-- 公开仓库只保留流程与编号（T/C/O）。
-- 真实种名、拉丁名、可识别路径写在本地 `species_list.csv` / `.project_env`，勿提交。
+- 跟踪的仓库只保留流程与占位编号（T/C/O）。
+- 物种映射与机器相关路径写在本地 `species_list.csv` / `.project_env`；两者均已 gitignore，便于每份克隆各自维护配置。

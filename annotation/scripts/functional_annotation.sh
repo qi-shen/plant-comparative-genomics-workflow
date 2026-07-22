@@ -222,12 +222,12 @@ main() {
     
     check_tools
     
-    # 处理BH
+    # 处理T01
     process_species "T01"
     
     echo ""
     
-    # 处理CK
+    # 处理T02
     process_species "T02"
     
     log_info ""

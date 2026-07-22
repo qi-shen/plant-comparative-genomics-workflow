@@ -196,7 +196,7 @@ main() {
         exit 1
     fi
     
-    # 处理BH和CK
+    # 处理T01和T02
     for species in T01 T02; do
         run_eggnog "$species"
         echo ""

@@ -124,7 +124,7 @@ main() {
     if [ -f "$bh_genome" ] || [ -L "$bh_genome" ]; then
         process_species "T01" "$bh_genome"
     else
-        log_error "BH基因组文件不存在: $bh_genome"
+        log_error "T01基因组文件不存在: $bh_genome"
     fi
     
     echo ""
@@ -134,7 +134,7 @@ main() {
     if [ -f "$ck_genome" ] || [ -L "$ck_genome" ]; then
         process_species "T02" "$ck_genome"
     else
-        log_error "CK基因组文件不存在: $ck_genome"
+        log_error "T02基因组文件不存在: $ck_genome"
     fi
     
     log_info ""

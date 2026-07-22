@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Phase 2: 用更新后的FMU(35,926基因)重跑OrthoFinder
+# Phase 2: 用更新后的C08(35,926基因)重跑OrthoFinder
 # 预计运行 2-6 小时（120线程）
 set -euo pipefail
 
@@ -13,7 +13,7 @@ conda activate comparative
 
 echo "=== Phase 2: 重跑 OrthoFinder ===" | tee "$LOG"
 echo "输入: $BASE/01_proteomes_longest/ (15物种)" | tee -a "$LOG"
-echo "FMU基因数: $(grep -c '^>' "$BASE/01_proteomes_longest/FMU.fa")" | tee -a "$LOG"
+echo "C08基因数: $(grep -c '^>' "$BASE/01_proteomes_longest/C08.fa")" | tee -a "$LOG"
 echo "开始时间: $(date)" | tee -a "$LOG"
 
 # 备份旧结果
@@ -25,7 +25,7 @@ if [ -d "$OF_OUT" ]; then
 fi
 
 # 运行OrthoFinder
-python "/home/shenq/Biosofts/OrthoFinder_source/orthofinder.py" \
+python "${HOME}/Biosofts/OrthoFinder_source/orthofinder.py" \
     -f "$BASE/01_proteomes_longest" \
     -t 120 -a 64 -S diamond -M msa \
     -o "$OF_OUT" 2>&1 | tee -a "$LOG"

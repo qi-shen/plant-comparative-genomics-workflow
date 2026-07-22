@@ -239,21 +239,21 @@ main() {
     
     log_info "Exonerate版本: $(exonerate --version 2>&1 | head -1)"
     
-    # 并行处理BH和CK
-    log_step "并行处理BH和CK两个物种..."
+    # 并行处理T01和T02
+    log_step "并行处理T01和T02两个物种..."
     
     process_species "T01" &
     local bh_pid=$!
-    log_info "启动BH预测任务 (PID: $bh_pid)"
+    log_info "启动T01预测任务 (PID: $bh_pid)"
     
     sleep 5  # 稍微延迟，避免同时启动过多任务
     
     process_species "T02" &
     local ck_pid=$!
-    log_info "启动CK预测任务 (PID: $ck_pid)"
+    log_info "启动T02预测任务 (PID: $ck_pid)"
     
     # 等待两个物种都完成
-    log_info "等待BH和CK预测完成..."
+    log_info "等待T01和T02预测完成..."
     wait "$bh_pid"
     local bh_status=$?
     
@@ -264,8 +264,8 @@ main() {
     log_info "=========================================="
     log_info "Exonerate同源预测完成"
     log_info "时间: $(date)"
-    log_info "BH状态: $([ $bh_status -eq 0 ] && echo '成功' || echo '失败')"
-    log_info "CK状态: $([ $ck_status -eq 0 ] && echo '成功' || echo '失败')"
+    log_info "T01状态: $([ $bh_status -eq 0 ] && echo '成功' || echo '失败')"
+    log_info "T02状态: $([ $ck_status -eq 0 ] && echo '成功' || echo '失败')"
     log_info "=========================================="
     
     # 显示结果摘要

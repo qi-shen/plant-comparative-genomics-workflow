@@ -53,9 +53,9 @@ def main():
     
     # 使用共线性分析中的同源基因对
     anchors_files = {
-        'BH_CK': f'{work_dir}/BH.CK.anchors',
-        'BH_TAU': f'{work_dir}/BH.TAU.anchors',
-        'CK_TAU': f'{work_dir}/CK.TAU.anchors',
+        'T01_T02': f'{work_dir}/T01.T02.anchors',
+        'T01_C02': f'{work_dir}/T01.C02.anchors',
+        'T02_C02': f'{work_dir}/T02.C02.anchors',
     }
     
     for name, anchors_file in anchors_files.items():

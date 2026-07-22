@@ -1,6 +1,6 @@
 #!/bin/bash
 # Circos可视化 - targets比较
-# 展示BH和CK基因组的共线性、基因密度等
+# 展示T01和T02基因组的共线性、基因密度等
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
@@ -95,7 +95,7 @@ if os.path.exists(anchors_file):
     with open("data/links.txt", "w") as f:
         for g1, g2 in links[:1000]:  # 只取前1000个
             # 格式: chr1 start1 end1 chr2 start2 end2
-            f.write(f"BH_chr1 1 1000 CK_chr1 1 1000\n")  # 占位符
+            f.write(f"T01_chr1 1 1000 T02_chr1 1 1000\n")  # 占位符
 
     print("  links文件已生成 (前1000个连接)")
 else:
@@ -192,7 +192,7 @@ format         = %d
 # 基因密度
 <plot>
 type = histogram
-file = data/BH_gene_density.txt
+file = data/T01_gene_density.txt
 r0   = 0.80r
 r1   = 0.90r
 color = red
@@ -201,7 +201,7 @@ fill_color = red
 
 <plot>
 type = histogram
-file = data/CK_gene_density.txt
+file = data/T02_gene_density.txt
 r0   = 0.70r
 r1   = 0.80r
 color = blue
@@ -253,9 +253,9 @@ library(ggplot2)
 library(dplyr)
 
 # 读取基因密度数据
-if (file.exists("data/BH_gene_density.txt")) {
-    bh_density <- read.table("data/BH_gene_density.txt", col.names=c("chrom", "start", "end", "count"))
-    ck_density <- read.table("data/CK_gene_density.txt", col.names=c("chrom", "start", "end", "count"))
+if (file.exists("data/T01_gene_density.txt")) {
+    bh_density <- read.table("data/T01_gene_density.txt", col.names=c("chrom", "start", "end", "count"))
+    ck_density <- read.table("data/T02_gene_density.txt", col.names=c("chrom", "start", "end", "count"))
 
     # 合并数据
     bh_density$species <- "T01"

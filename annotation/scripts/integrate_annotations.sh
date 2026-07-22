@@ -171,7 +171,7 @@ main() {
     
     cd "$PROJECT_DIR"
     
-    # 整合BH和CK
+    # 整合T01和T02
     integrate_species "T01"
     echo ""
     integrate_species "T02"

@@ -38,33 +38,33 @@ fi
 echo "✓ 已停止"
 echo ""
 
-# 重启BH RepeatModeler
-echo "【重启BH RepeatModeler】"
+# 重启T01 RepeatModeler
+echo "【重启T01 RepeatModeler】"
 cd "${ANNOTATION_DIR}/T01/repeat"
 
 if [ "$USE_LTR" = "true" ]; then
-    nohup RepeatModeler -database BH_genome -LTRStruct -threads "$THREADS" > repeatmodeler.log 2>&1 &
+    nohup RepeatModeler -database T01_genome -LTRStruct -threads "$THREADS" > repeatmodeler.log 2>&1 &
 else
-    nohup RepeatModeler -database BH_genome -threads "$THREADS" > repeatmodeler.log 2>&1 &
+    nohup RepeatModeler -database T01_genome -threads "$THREADS" > repeatmodeler.log 2>&1 &
 fi
 
-BH_PID=$!
-echo "✓ T01 RepeatModeler已启动，PID: $BH_PID"
+T01_PID=$!
+echo "✓ T01 RepeatModeler已启动，PID: $T01_PID"
 sleep 2
 
-# 重启CK RepeatModeler
+# 重启T02 RepeatModeler
 echo ""
-echo "【重启CK RepeatModeler】"
+echo "【重启T02 RepeatModeler】"
 cd "${ANNOTATION_DIR}/T02/repeat"
 
 if [ "$USE_LTR" = "true" ]; then
-    nohup RepeatModeler -database CK_genome -LTRStruct -threads "$THREADS" > repeatmodeler.log 2>&1 &
+    nohup RepeatModeler -database T02_genome -LTRStruct -threads "$THREADS" > repeatmodeler.log 2>&1 &
 else
-    nohup RepeatModeler -database CK_genome -threads "$THREADS" > repeatmodeler.log 2>&1 &
+    nohup RepeatModeler -database T02_genome -threads "$THREADS" > repeatmodeler.log 2>&1 &
 fi
 
-CK_PID=$!
-echo "✓ T02 RepeatModeler已启动，PID: $CK_PID"
+T02_PID=$!
+echo "✓ T02 RepeatModeler已启动，PID: $T02_PID"
 sleep 2
 
 # 验证
@@ -74,10 +74,10 @@ ps aux | grep "[R]epeatModeler" | grep -v grep
 
 echo ""
 echo "【日志检查】"
-echo "BH日志:"
+echo "T01日志:"
 tail -5 "${ANNOTATION_DIR}/T01/repeat/repeatmodeler.log" 2>/dev/null || echo "  日志文件尚未生成"
 echo ""
-echo "CK日志:"
+echo "T02日志:"
 tail -5 "${ANNOTATION_DIR}/T02/repeat/repeatmodeler.log" 2>/dev/null || echo "  日志文件尚未生成"
 
 echo ""
