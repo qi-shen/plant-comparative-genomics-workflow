@@ -126,6 +126,7 @@ In the public repo, keep only IDs and relative paths — **do not** commit Chine
 
 ## Related docs
 
+- [docs/REFACTOR_PLAN.en.md](docs/REFACTOR_PLAN.en.md) — refactor diagnosis & phased plan
 - [CLAUDE.en.md](CLAUDE.en.md) — command cheat sheet
 - [old_reults/README_INIT.en.md](old_reults/README_INIT.en.md) — initialization
 - [old_reults/AGENTS.en.md](old_reults/AGENTS.en.md) — coding & plotting rules

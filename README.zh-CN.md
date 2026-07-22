@@ -125,6 +125,7 @@ bash scripts/13_run_cafe_v2.sh
 
 ## 相关文档
 
+- [docs/REFACTOR_PLAN.zh-CN.md](docs/REFACTOR_PLAN.zh-CN.md) — 重构诊断与分阶段计划
 - [CLAUDE.zh-CN.md](CLAUDE.zh-CN.md) — 命令速查
 - [old_reults/README_INIT.zh-CN.md](old_reults/README_INIT.zh-CN.md) — 初始化
 - [old_reults/AGENTS.zh-CN.md](old_reults/AGENTS.zh-CN.md) — 编码与绘图规范

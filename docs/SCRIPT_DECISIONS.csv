@@ -1,0 +1,223 @@
+tree,file,ext,bytes,md5_12,versionish_name,has_abs_path,privacy_hits,readme_mentioned,provisional_decision,decision_note
+comparative_genomics,01_prepare_proteomes.sh,.sh,2966,99d196dc420e,no,yes,"BH,CK,identifiable_filename,目标种",yes,keep,mentioned in README/CLAUDE
+comparative_genomics,02_filter_proteomes.py,.py,4576,fbc7eb5e90b1,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,02_filter_proteomes_v2.py,.py,5130,b0ace845e0f9,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,02_filter_proteomes_v3.py,.py,4106,bb91a0348533,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,03_run_orthofinder.sh,.sh,2369,a0d1fc337721,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,04_prepare_synteny_data.sh,.sh,2813,366617292871,no,yes,"BH,CK,identifiable_filename",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,04_prepare_synteny_data_v2.py,.py,4017,9cc3c786234d,yes,yes,"BH,CK,identifiable_filename",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,04_prepare_synteny_data_v3.py,.py,3686,f504acd3b821,yes,yes,"BH,CK,identifiable_filename",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,05_run_wgd_analysis.sh,.sh,2602,0020b56c7e23,no,yes,"BH,CK,identifiable_filename",yes,keep,mentioned in README/CLAUDE
+comparative_genomics,05_run_wgd_analysis_v2.sh,.sh,4248,fd8f6bd4b232,yes,yes,"BH,CK,identifiable_filename",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,06_run_jcvi_synteny.sh,.sh,2717,3e0741c9332f,no,yes,"BH,CK",yes,keep,mentioned in README/CLAUDE
+comparative_genomics,07_run_jcvi_synteny_v2.sh,.sh,2951,b77ceaf01451,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,08_jcvi_synteny_simple.sh,.sh,2488,ad16795c628a,yes,yes,"BH,CK,identifiable_filename",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,09_jcvi_more_pairs.sh,.sh,2533,a7b2897420e1,yes,yes,"BH,CK,identifiable_filename",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,100_prepare_new_fmu.sh,.sh,1679,58bf117a76c2,no,yes,,no,keep_figures,figure/delivery script
+comparative_genomics,101_rerun_orthofinder.sh,.sh,1945,f943161bbd5e,no,yes,,no,keep_figures,figure/delivery script
+comparative_genomics,10_calculate_ks.py,.py,2279,2014da71776b,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,110_figure4_comparative_genomics.R,.R,16404,5833032a1ab9,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,111_figure5_wgd_synteny.R,.R,7287,27c960a53cf1,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,112_phylogeny_tree_figure.R,.R,4420,b1004ec0a4d4,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,112_supplement_orthofinder.R,.R,7881,3945992361ee,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,113_supplement_synteny.R,.R,6869,2dd152f6d476,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,114_supplement_cafe.R,.R,5033,e8a13473fc0e,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,115_supplement_wgd.R,.R,4092,f3273b060b0f,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,116_fix_all_supplement_figures.R,.R,15027,2a9956233a22,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,11_run_wgd_ks.sh,.sh,1443,3a9cae23efae,no,yes,"BH,CK,identifiable_filename",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,12_run_phylogeny.sh,.sh,3013,aab577948a65,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,13_run_cafe.sh,.sh,2165,cf05b701a571,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,13_run_cafe_v2.sh,.sh,4617,81d6c441e8ea,yes,yes,,yes,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,14_extract_single_copy_genes.sh,.sh,2917,eef67c8e0a73,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,15_summarize_results.py,.py,4068,d503ff1d43ac,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,16_prepare_selection_analysis.sh,.sh,3036,bc39ca6c84ef,no,yes,"BH,CK,identifiable_filename",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,17_extract_more_single_copy.py,.py,2508,e6506122af57,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,18_run_paml_selection.sh,.sh,4682,15f80a883c6f,no,yes,"BH,CK",yes,keep,mentioned in README/CLAUDE
+comparative_genomics,19_run_paml_complete.py,.py,3884,8a62f7aa821c,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,20_improved_wgd_analysis.sh,.sh,1902,bf3150f6c538,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,21_run_paml_align_and_analyze.sh,.sh,3712,b05d9624f8cc,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,22_run_codeml_batch.sh,.sh,2191,27be74f6b247,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,23_parse_cafe_results.py,.py,3527,23e3185e52a1,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,24_calculate_ks_from_synteny.py,.py,2783,1c1e17336b09,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,25_fix_phylip_format.py,.py,2174,40b4b41da42c,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,26_fix_phylip_length.py,.py,2848,3a8b35f1d7a3,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,27_create_species_tree.py,.py,1702,8b4657cc9131,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,28_fix_paml_species_names.py,.py,4339,8a145b6d585d,yes,yes,"BH,CK",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,29_recreate_phylip_with_bh.py,.py,2047,f3b16fa09d85,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,30_run_remaining_codeml.sh,.sh,2066,3d2f6683532c,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,31_parse_cafe_detailed.py,.py,3731,dedd0f781391,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,32_summarize_all_results.py,.py,5069,45c1add977cd,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,33_calculate_ks_from_synteny.sh,.sh,2480,6f52661bcfb4,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,34_extract_ks_pairs_from_synteny.py,.py,5700,8d07eb352a0c,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,35_run_kaks_calculator.sh,.sh,1899,8afa191409ee,no,yes,,yes,keep,mentioned in README/CLAUDE
+comparative_genomics,36_format_for_kaks.py,.py,2040,42253cf340f2,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,37_run_kaks_simple.sh,.sh,3330,9c4e9f3ae128,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,38_calculate_ks_with_paml.py,.py,5644,6e2fd1254020,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,39_install_and_run_kaks.sh,.sh,2592,17f3129c15a4,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,40_batch_kaks_with_paml.py,.py,11158,4a226c0db84f,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,41_simple_ks_calculator.py,.py,6640,1570c43754a3,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,42_improved_kaks_paml.py,.py,9961,14095ef18eae,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,43_final_kaks_summary.py,.py,3912,050ac239e6d5,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,44_fix_and_run_kaks.py,.py,6975,e1c755a8818a,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,45_final_kaks_working.py,.py,8226,440e533f672b,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,46_calculate_ks_python.py,.py,8271,9ba1d31f1577,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,48_summarize_wgd_results.py,.py,3659,0e0f7ecb5e5d,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,49_analyze_cafe_families.py,.py,5857,e9d46b41580d,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,50_complete_paml_analysis.sh,.sh,3043,c8319eab4095,yes,yes,,no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,51_parse_paml_results.py,.py,6977,bd395a925e94,no,yes,,no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,52_create_final_summary.py,.py,7471,a8993af28a9b,yes,yes,"BH,CK,目标种",no,archive_candidate,likely trial/winner-selection needed in Phase 2
+comparative_genomics,60_run_positive_selection.sh,.sh,10088,546f20505910,no,yes,"BH,CK,identifiable_filename",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,61_run_circos.sh,.sh,7854,1c0faf13ebfd,no,yes,"BH,CK",no,keep_review,numbered pipeline script; confirm winner
+comparative_genomics,90_generate_delivery_figures.R,.R,20662,c576c6d6a2a2,no,yes,"BH,CK,目标种",no,keep_figures,figure/delivery script
+comparative_genomics,92_build_longest_proteomes.py,.py,3785,72a6ba74f9e2,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,93_rerun_longest_pipeline.sh,.sh,3678,5551669c0b52,no,yes,,no,keep_figures,figure/delivery script
+comparative_genomics,95_delivery_figures.R,.R,14403,6a1d5403a411,no,yes,"BH,CK",no,keep_figures,figure/delivery script
+comparative_genomics,auto_monitor.sh,.sh,2813,49e2e648ccf4,no,no,,no,archive_or_tools,ops/monitor helper
+comparative_genomics,check_visualization_status.sh,.sh,2072,e0984ebe9dcb,no,no,,no,archive_or_tools,ops/monitor helper
+comparative_genomics,monitor_visualization.sh,.sh,1232,6d7ad257043d,no,no,,no,archive_or_tools,ops/monitor helper
+comparative_genomics,run_visualizations_background.sh,.sh,1662,07f11d2387c8,no,no,,no,archive_or_tools,ops/monitor helper
+comparative_genomics,stop_visualization.sh,.sh,721,3e748dcbd71a,no,no,,no,archive_or_tools,ops/monitor helper
+comparative_genomics,visualization_summary.sh,.sh,1817,0f630697569c,no,no,,no,archive_or_tools,ops/monitor helper
+old_reults/comparative_genomics,01_prepare_proteomes.sh,.sh,3067,327fcc40cb16,no,yes,"BH,CK,identifiable_filename,目标种",yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,02_filter_proteomes.py,.py,4576,fbc7eb5e90b1,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,02_filter_proteomes_v2.py,.py,5130,b0ace845e0f9,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,02_filter_proteomes_v3.py,.py,4106,bb91a0348533,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,03_run_orthofinder.sh,.sh,2380,9a402cdbeb0f,no,yes,,yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,04_prepare_synteny_data.sh,.sh,2940,d38c989f4f4f,no,yes,"BH,CK,identifiable_filename",no,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,04_prepare_synteny_data_v2.py,.py,4017,9cc3c786234d,yes,yes,"BH,CK,identifiable_filename",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,04_prepare_synteny_data_v3.py,.py,3686,f504acd3b821,yes,yes,"BH,CK,identifiable_filename",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,05_run_wgd_analysis.sh,.sh,2194,2c845f41ccf7,no,yes,"BH,CK,identifiable_filename",yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,06_run_jcvi_synteny.sh,.sh,2268,748679424993,no,yes,"BH,CK",yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,07_run_jcvi_synteny_v2.sh,.sh,2951,b77ceaf01451,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,08_jcvi_synteny_simple.sh,.sh,2488,ad16795c628a,yes,yes,"BH,CK,identifiable_filename",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,09_jcvi_more_pairs.sh,.sh,2533,a7b2897420e1,yes,yes,"BH,CK,identifiable_filename",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,10_calculate_ks.py,.py,2279,2014da71776b,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,11_run_wgd_ks.sh,.sh,1487,c63096ac72c6,no,yes,"BH,CK,identifiable_filename",no,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,12_run_phylogeny.sh,.sh,2949,e5e951d35c60,no,yes,,yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,13_run_cafe.sh,.sh,2165,cf05b701a571,no,yes,,yes,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,13_run_cafe_v2.sh,.sh,4715,5b2a6b27af2c,yes,yes,,yes,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,14_extract_single_copy_genes.sh,.sh,2917,eef67c8e0a73,no,yes,,yes,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,15_summarize_results.py,.py,4068,d503ff1d43ac,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,16_prepare_selection_analysis.sh,.sh,3058,7be2413b3e35,no,yes,"BH,CK,identifiable_filename",no,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,17_extract_more_single_copy.py,.py,2508,e6506122af57,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,18_run_paml_selection.sh,.sh,4682,15f80a883c6f,no,yes,"BH,CK",yes,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,19_run_paml_complete.py,.py,3884,8a62f7aa821c,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,20_improved_wgd_analysis.sh,.sh,1902,bf3150f6c538,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,21_run_paml_align_and_analyze.sh,.sh,3712,b05d9624f8cc,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,22_run_codeml_batch.sh,.sh,2191,27be74f6b247,no,yes,,yes,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,23_parse_cafe_results.py,.py,3527,23e3185e52a1,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,24_calculate_ks_from_synteny.py,.py,2783,1c1e17336b09,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,25_fix_phylip_format.py,.py,2174,40b4b41da42c,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,26_fix_phylip_length.py,.py,2848,3a8b35f1d7a3,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,27_create_species_tree.py,.py,1702,8b4657cc9131,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,28_fix_paml_species_names.py,.py,4339,8a145b6d585d,yes,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,29_recreate_phylip_with_bh.py,.py,2047,f3b16fa09d85,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,30_run_remaining_codeml.sh,.sh,2066,3d2f6683532c,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,31_parse_cafe_detailed.py,.py,3731,dedd0f781391,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,32_summarize_all_results.py,.py,5069,45c1add977cd,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,33_calculate_ks_from_synteny.sh,.sh,2480,6f52661bcfb4,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,34_extract_ks_pairs_from_synteny.py,.py,5700,8d07eb352a0c,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,35_run_kaks_calculator.sh,.sh,1899,8afa191409ee,no,yes,,yes,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,36_format_for_kaks.py,.py,2040,42253cf340f2,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,37_run_kaks_simple.sh,.sh,3330,9c4e9f3ae128,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,38_calculate_ks_with_paml.py,.py,5644,6e2fd1254020,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,39_install_and_run_kaks.sh,.sh,2592,17f3129c15a4,no,yes,"BH,CK",no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,40_batch_kaks_with_paml.py,.py,11158,4a226c0db84f,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,41_simple_ks_calculator.py,.py,6640,1570c43754a3,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,42_improved_kaks_paml.py,.py,9961,14095ef18eae,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,43_final_kaks_summary.py,.py,3912,050ac239e6d5,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,44_fix_and_run_kaks.py,.py,6975,e1c755a8818a,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,45_final_kaks_working.py,.py,8226,440e533f672b,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,46_calculate_ks_python.py,.py,8271,9ba1d31f1577,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,48_summarize_wgd_results.py,.py,3659,0e0f7ecb5e5d,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,49_analyze_cafe_families.py,.py,5857,e9d46b41580d,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,50_complete_paml_analysis.sh,.sh,3043,c8319eab4095,yes,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,51_parse_paml_results.py,.py,6977,bd395a925e94,no,yes,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,52_create_final_summary.py,.py,6805,280186db92ae,yes,yes,"BH,CK,目标种",no,merge_then_delete,diverged from comparative_genomics/; merge first
+old_reults/comparative_genomics,auto_monitor.sh,.sh,2813,49e2e648ccf4,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,check_visualization_status.sh,.sh,2072,e0984ebe9dcb,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,monitor_visualization.sh,.sh,1232,6d7ad257043d,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,run_visualizations_background.sh,.sh,1662,07f11d2387c8,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,stop_visualization.sh,.sh,721,3e748dcbd71a,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/comparative_genomics,visualization_summary.sh,.sh,1817,0f630697569c,no,no,,no,delete_after_phase1,duplicate of comparative_genomics/
+old_reults/annotation,PASA_update_guide.md,.md,5658,99ec4a41321f,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,analyze_busco_improvement.R,.R,8649,606cb7ac037a,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,calculate_n50.sh,.sh,7336,1a2831ff4862,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,check_annotation_tools.sh,.sh,1897,2211287a7b73,no,yes,,no,archive_or_tools,ops/monitor helper
+old_reults/annotation,check_busco_progress.sh,.sh,1676,479e7b083194,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,check_pasa_progress.sh,.sh,2205,7f4d22cc7ce6,no,yes,BH,no,archive_or_tools,ops/monitor helper
+old_reults/annotation,check_progress.sh,.sh,4556,b7611970294e,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,check_running_tasks.sh,.sh,1117,a8c3519f1041,no,no,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,compare_annotation_quality.R,.R,5312,4539ba59b09f,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,convert_augustus_to_standard_gff3.py,.py,8767,6547bd27045f,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,convert_evm_to_standard.py,.py,7450,3e0da296ff58,no,no,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,create_delivery_package_v2.sh,.sh,3287,0cfdb23c2da1,yes,yes,"BH,CK",no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,create_final_comparison_report.R,.R,7545,b4ff94dc6584,yes,yes,"BH,CK",no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,create_id_mapping.py,.py,3828,be703cd83e2c,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,create_preliminary_comparison.R,.R,6934,f5a23f560e59,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,data_quality_control.sh,.sh,9584,cab22c7629c9,no,yes,identifiable_filename,no,keep_annotation,annotation pipeline script
+old_reults/annotation,decompress_and_extract.sh,.sh,7368,210c4eec6176,no,yes,identifiable_filename,no,keep_annotation,annotation pipeline script
+old_reults/annotation,download_eggnog_database.sh,.sh,638,23ccac58a642,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,evaluate_annotation.R,.R,16372,36b1edbf289c,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,evm_integration.sh,.sh,7274,b0f092787151,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,extract_pasa_proteins.sh,.sh,1843,45812a864e49,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,extract_pasa_proteins_v2.sh,.sh,1525,6c48582b993e,yes,yes,,no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,extract_problematic_buscos.sh,.sh,3361,0256d1398553,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,extract_protein_sequences.sh,.sh,4849,5bf7eccc9e6e,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,fast_gene_prediction.sh,.sh,5747,825c4afa7a63,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,filter_longest_orf.sh,.sh,1418,ef661d85ba90,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,filter_longest_orf_simple.sh,.sh,1204,d9986e4ebad3,yes,yes,,no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,fix_transcript_gff3.py,.py,2108,7e8c360af899,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,functional_annotation.sh,.sh,7425,1104c84e7b83,no,yes,"BH,CK",yes,keep_annotation,annotation pipeline script
+old_reults/annotation,functional_annotation_main.sh,.sh,3580,027c42815f4e,no,yes,"BH,CK",yes,keep_annotation,annotation pipeline script
+old_reults/annotation,generate_final_report.sh,.sh,3402,0165c1d703bb,yes,yes,"BH,CK",no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,improve_busco_completeness.md,.md,5534,08ef6a8b7daa,yes,no,"BH,CK",no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,install_busco.sh,.sh,334,34950a9e5b6b,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,integrate_annotations.sh,.sh,6737,475de55c1ed5,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,merge_stringtie_gtf.sh,.sh,4238,0894161eead9,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,monitor_exonerate.sh,.sh,2735,8403a6da0a70,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,monitor_exonerate_ultra.sh,.sh,2908,5db36c7a7cc4,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,monitor_gemoma.sh,.sh,3337,552573daa7bc,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,monitor_gemoma_parallel.sh,.sh,3128,7b5f174855dd,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,monitor_progress.sh,.sh,1553,7e440ce1fad3,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,monitor_repeatmasker.sh,.sh,4670,71d40b0fb69a,no,yes,"BH,CK",no,archive_or_tools,ops/monitor helper
+old_reults/annotation,optimize_repeatmodeler.sh,.sh,2285,fd5790c84cf8,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,parallel_augustus.sh,.sh,4038,517915149dfd,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,parse_blast_results_only.sh,.sh,2702,1c954227ae08,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,prepare_blast_databases.sh,.sh,11392,654180ec42b8,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,prepare_delivery_package.sh,.sh,4123,2f9934ee2d3b,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,process_diamond_results.py,.py,5240,faa3d385a02c,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,quality_assessment.sh,.sh,10582,b5de4d62e0f4,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,repeat_annotation.sh,.sh,3597,f2c8303ff7b9,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,restart_repeatmodeler_optimized.sh,.sh,2341,6f8b7cc45656,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_augustus.sh,.sh,3052,7d476760f6c7,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_bh_augustus.sh,.sh,4044,dc6d1b9172c6,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_blast_parallel.sh,.sh,6433,e1ef279e14c0,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_busco.sh,.sh,5641,10911ffcae80,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_busco_annotation.sh,.sh,8223,d625f884617b,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_busco_single.sh,.sh,1884,e5c8d49813af,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_busco_updated.sh,.sh,2143,d43e522ec299,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_eggnog_mapper.sh,.sh,6236,1496523e0fdc,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_evm_integration.sh,.sh,10408,6c7d5b297306,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_evm_v2.sh,.sh,5406,ff83e7609369,yes,yes,"BH,CK",no,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,run_evm_v3.sh,.sh,4661,752eba8eb32f,yes,yes,"BH,CK",yes,archive_candidate,versioned name; pick winner in Phase 2
+old_reults/annotation,run_exonerate_parallel.sh,.sh,9728,646560e6b90b,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_exonerate_ultra_parallel.sh,.sh,9041,b303bbcecf15,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_gemoma.sh,.sh,7061,f37c7e72cb9b,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_gemoma_full.sh,.sh,7780,84a435842f43,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_gemoma_parallel.sh,.sh,10149,a762c41acc86,no,yes,"BH,CK,identifiable_filename",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_genemark.sh,.sh,3449,a9b08f6af0d3,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_interproscan.sh,.sh,4144,e8804038fe07,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_pasa_update.sh,.sh,6138,010c8c3c212b,no,yes,BH,yes,keep_annotation,annotation pipeline script
+old_reults/annotation,run_repeatmasker.sh,.sh,4229,2511efd9c71d,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,run_transcriptome_background.sh,.sh,343,4eb21c02217a,no,yes,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,setup_mysql_for_pasa.sh,.sh,4429,0141ef129a06,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,setup_pasa.sh,.sh,3739,ef08d7dcada0,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,structure_annotation.sh,.sh,8354,eeef5aa41c66,no,yes,"BH,CK,identifiable_filename",yes,keep_annotation,annotation pipeline script
+old_reults/annotation,transcriptome_processing.sh,.sh,6938,322857e6b69f,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,update_annotation_ids.py,.py,1573,cac8cfde022d,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,update_annotation_with_transcriptome.sh,.sh,8624,6a6d81993329,no,yes,BH,no,keep_annotation,annotation pipeline script
+old_reults/annotation,update_functional_annotation.py,.py,2568,60bc37b2289e,no,no,,no,keep_annotation,annotation pipeline script
+old_reults/annotation,visualize_busco_comparison.R,.R,3760,6a1598136c1d,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,visualize_busco_results.R,.R,10212,88c7570b7ce0,no,yes,"BH,CK",no,keep_annotation,annotation pipeline script
+old_reults/annotation,wait_and_generate_final_report.sh,.sh,539,2246bb5dd91f,yes,yes,,no,archive_or_tools,ops/monitor helper
