@@ -1,0 +1,16 @@
+编号,角色,备注,目录路径
+T01,目标样本,自行填写本地标签,results/targets/T01/
+T02,目标样本,自行填写本地标签,results/targets/T02/
+C01,比较物种,,results/comp/C01/
+C02,比较物种,,results/comp/C02/
+C03,比较物种,,results/comp/C03/
+C04,比较物种,,results/comp/C04/
+C05,比较物种,,results/comp/C05/
+C06,比较物种,,results/comp/C06/
+C07,比较物种,,results/comp/C07/
+C08,比较物种,,results/comp/C08/
+C09,比较物种,,results/comp/C09/
+C10,比较物种,,results/comp/C10/
+C11,比较物种,,results/comp/C11/
+O01,外群,,results/outgroup/O01/
+O02,外群,,results/outgroup/O02/

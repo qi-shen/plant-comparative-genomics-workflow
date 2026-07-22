@@ -1,0 +1,30 @@
+# 比较基因组流程 - 环境变量模板（脱敏）
+# 用法：
+#   cp .project_env.example .project_env
+#   编辑路径后：source .project_env
+
+export PROJECT_ROOT="/path/to/project_root"
+
+export RESULTS_DIR="${PROJECT_ROOT}/old_reults/results"
+export SCRIPTS_DIR="${PROJECT_ROOT}/old_reults/scripts"
+export ANNOTATION_DIR="${PROJECT_ROOT}/old_reults/annotation"
+export COMPARATIVE_DIR="${PROJECT_ROOT}/comparative_genomics"
+export LOGS_DIR="${PROJECT_ROOT}/old_reults/logs"
+export TOOLS_DIR="${PROJECT_ROOT}/old_reults/tools"
+export RNA_DIR="${PROJECT_ROOT}/old_reults/rna_rawdata"
+
+# 目标样本基因组（使用中性目录名，勿写入可识别种名）
+export T01_GENOME="${RESULTS_DIR}/targets/T01/T01.Chr.final.fa"
+export T02_GENOME="${RESULTS_DIR}/targets/T02/T02.Chr.final.fa"
+
+# 兼容旧脚本变量名（可选）
+export WF_PROJECT_ROOT="${PROJECT_ROOT}"
+export WF_RESULTS_DIR="${RESULTS_DIR}"
+export WF_SCRIPTS_DIR="${SCRIPTS_DIR}"
+export WF_ANNOTATION_DIR="${ANNOTATION_DIR}"
+export WF_COMPARATIVE_DIR="${COMPARATIVE_DIR}"
+export WF_LOGS_DIR="${LOGS_DIR}"
+export WF_TOOLS_DIR="${TOOLS_DIR}"
+export WF_RNA_DIR="${RNA_DIR}"
+export WF_T01_GENOME="${T01_GENOME}"
+export WF_T02_GENOME="${T02_GENOME}"
