@@ -1,7 +1,9 @@
+# Comparative genomics workflow - environment template (anonymized)
 # 比较基因组流程 - 环境变量模板（脱敏）
-# 用法：
+#
+# Usage / 用法:
 #   cp .project_env.example .project_env
-#   编辑路径后：source .project_env
+#   edit paths / 编辑路径后: source .project_env
 
 export PROJECT_ROOT="/path/to/project_root"
 
@@ -13,10 +15,12 @@ export LOGS_DIR="${PROJECT_ROOT}/old_reults/logs"
 export TOOLS_DIR="${PROJECT_ROOT}/old_reults/tools"
 export RNA_DIR="${PROJECT_ROOT}/old_reults/rna_rawdata"
 
+# Target genomes — use neutral directory names only
 # 目标样本基因组（使用中性目录名，勿写入可识别种名）
 export T01_GENOME="${RESULTS_DIR}/targets/T01/T01.Chr.final.fa"
 export T02_GENOME="${RESULTS_DIR}/targets/T02/T02.Chr.final.fa"
 
+# Legacy/compat aliases for older scripts (optional)
 # 兼容旧脚本变量名（可选）
 export WF_PROJECT_ROOT="${PROJECT_ROOT}"
 export WF_RESULTS_DIR="${RESULTS_DIR}"
