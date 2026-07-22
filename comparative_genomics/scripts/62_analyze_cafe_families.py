@@ -99,17 +99,17 @@ def analyze_cafe_families():
             contracted = merged_df[merged_df[contract_col] < 0]
             print(f"  {species} 收缩: {len(contracted)} 个家族")
     
-    # 统计TCH扩张家族
-    tch_expand_cols = [col for col in merged_df.columns if 'tch' in col.lower() and ('expand' in col.lower() or 'gain' in col.lower() or '+' in col)]
-    if tch_expand_cols:
-        tch_expand_col = tch_expand_cols[0]
-        tch_expanded = merged_df[merged_df[tch_expand_col] > 0]
-        print(f"\nTCH显著扩张家族: {len(tch_expanded)} 个")
+    # 统计C03扩张家族
+    c03_expand_cols = [col for col in merged_df.columns if 'c03' in col.lower() and ('expand' in col.lower() or 'gain' in col.lower() or '+' in col)]
+    if c03_expand_cols:
+        c03_expand_col = c03_expand_cols[0]
+        c03_expanded = merged_df[merged_df[c03_expand_col] > 0]
+        print(f"\nC03显著扩张家族: {len(c03_expanded)} 个")
         
-        # 保存TCH扩张家族列表
-        tch_output = os.path.join(output_dir, "tch_expanded_families.tsv")
-        tch_expanded.to_csv(tch_output, sep='\t', index=False)
-        print(f"TCH扩张家族列表已保存: {tch_output}")
+        # 保存C03扩张家族列表
+        c03_output = os.path.join(output_dir, "c03_expanded_families.tsv")
+        c03_expanded.to_csv(c03_output, sep='\t', index=False)
+        print(f"C03扩张家族列表已保存: {c03_output}")
     
     # 按变化类型分类
     print("\n按变化类型分类:")

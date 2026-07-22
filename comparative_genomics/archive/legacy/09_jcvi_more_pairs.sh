@@ -18,41 +18,41 @@ conda activate jcvi
 
 cd "$WORK_DIR"
 
-# 添加TAU数据（如果不存在）
-if [ ! -f "TAU.bed" ]; then
-    cp "$BASE_DIR/results/C02/tau.longest_cds.fasta" TAU.cds
-    cp "$BASE_DIR/comparative_genomics/01_proteomes/filtered/TAU.fa" TAU.pep
+# 添加C02数据（如果不存在）
+if [ ! -f "C02.bed" ]; then
+    cp "$BASE_DIR/results/C02/C02.longest_cds.fasta" C02.cds
+    cp "$BASE_DIR/comparative_genomics/01_proteomes/filtered/C02.fa" C02.pep
     awk -F'\t' '$3=="mRNA" {split($9,a,";"); for(i in a) if(a[i]~/^ID=/) {gsub("ID=","",a[i]); print $1"\t"$4-1"\t"$5"\t"a[i]"\t0\t"$7}}' \
-        "$BASE_DIR/results/C02/tau.gff3" | sort -k1,1 -k2,2n > TAU.bed
-    echo "TAU数据准备完成: $(wc -l < TAU.bed) 基因"
+        "$BASE_DIR/results/C02/C02.gff3" | sort -k1,1 -k2,2n > C02.bed
+    echo "C02数据准备完成: $(wc -l < C02.bed) 基因"
 fi
 
-# BH vs TAU
+# T01 vs C02
 echo ""
-echo "分析 BH vs TAU..."
-if [ ! -f "BH.TAU.anchors" ]; then
-    python -m jcvi.compara.catalog ortholog BH TAU --no_strip_names 2>&1 | tail -5 || echo "完成"
+echo "分析 T01 vs C02..."
+if [ ! -f "T01.C02.anchors" ]; then
+    python -m jcvi.compara.catalog ortholog T01 C02 --no_strip_names 2>&1 | tail -5 || echo "完成"
 fi
 
-if [ -f "BH.TAU.anchors" ]; then
-    python -m jcvi.graphics.dotplot BH.TAU.anchors --notex -o BH_TAU_dotplot.pdf 2>&1 | tail -3 || echo "绑图完成"
-    blocks=$(grep -c '^###' BH.TAU.anchors 2>/dev/null || echo "0")
-    pairs=$(grep -v '^#' BH.TAU.anchors | wc -l)
-    echo "BH vs TAU: $blocks 个共线性区块, $pairs 对同源基因"
+if [ -f "T01.C02.anchors" ]; then
+    python -m jcvi.graphics.dotplot T01.C02.anchors --notex -o T01_C02_dotplot.pdf 2>&1 | tail -3 || echo "绑图完成"
+    blocks=$(grep -c '^###' T01.C02.anchors 2>/dev/null || echo "0")
+    pairs=$(grep -v '^#' T01.C02.anchors | wc -l)
+    echo "T01 vs C02: $blocks 个共线性区块, $pairs 对同源基因"
 fi
 
-# CK vs TAU
+# T02 vs C02
 echo ""
-echo "分析 CK vs TAU..."
-if [ ! -f "CK.TAU.anchors" ]; then
-    python -m jcvi.compara.catalog ortholog CK TAU --no_strip_names 2>&1 | tail -5 || echo "完成"
+echo "分析 T02 vs C02..."
+if [ ! -f "T02.C02.anchors" ]; then
+    python -m jcvi.compara.catalog ortholog T02 C02 --no_strip_names 2>&1 | tail -5 || echo "完成"
 fi
 
-if [ -f "CK.TAU.anchors" ]; then
-    python -m jcvi.graphics.dotplot CK.TAU.anchors --notex -o CK_TAU_dotplot.pdf 2>&1 | tail -3 || echo "绑图完成"
-    blocks=$(grep -c '^###' CK.TAU.anchors 2>/dev/null || echo "0")
-    pairs=$(grep -v '^#' CK.TAU.anchors | wc -l)
-    echo "CK vs TAU: $blocks 个共线性区块, $pairs 对同源基因"
+if [ -f "T02.C02.anchors" ]; then
+    python -m jcvi.graphics.dotplot T02.C02.anchors --notex -o T02_C02_dotplot.pdf 2>&1 | tail -3 || echo "绑图完成"
+    blocks=$(grep -c '^###' T02.C02.anchors 2>/dev/null || echo "0")
+    pairs=$(grep -v '^#' T02.C02.anchors | wc -l)
+    echo "T02 vs C02: $blocks 个共线性区块, $pairs 对同源基因"
 fi
 
 echo ""

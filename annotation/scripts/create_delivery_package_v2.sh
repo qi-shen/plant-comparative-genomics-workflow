@@ -15,39 +15,39 @@ echo "=========================================="
 rm -rf "$DELIVERY_DIR"
 mkdir -p "$DELIVERY_DIR/T01" "$DELIVERY_DIR/T02"
 
-# 处理BH
+# 处理T01
 echo ""
 echo "=== 处理 T01 ==="
-cp "${PROJECT_DIR}/annotation/T01/structure/BH_genes.gff3" "$DELIVERY_DIR/T01/"
-cp "${PROJECT_DIR}/annotation/T01/structure/BH_genes.cds.fa" "$DELIVERY_DIR/T01/"
-cp "${PROJECT_DIR}/annotation/T01/structure/BH_genes.pep.fa" "$DELIVERY_DIR/T01/"
-cp "${PROJECT_DIR}/annotation/T01/structure/BH_id_mapping.tsv" "$DELIVERY_DIR/T01/"
+cp "${PROJECT_DIR}/annotation/T01/structure/T01_genes.gff3" "$DELIVERY_DIR/T01/"
+cp "${PROJECT_DIR}/annotation/T01/structure/T01_genes.cds.fa" "$DELIVERY_DIR/T01/"
+cp "${PROJECT_DIR}/annotation/T01/structure/T01_genes.pep.fa" "$DELIVERY_DIR/T01/"
+cp "${PROJECT_DIR}/annotation/T01/structure/T01_id_mapping.tsv" "$DELIVERY_DIR/T01/"
 
 # 检查功能注释文件
-if [ -f "${PROJECT_DIR}/annotation/T01/function/BH_functional_annotation.txt" ]; then
-    cp "${PROJECT_DIR}/annotation/T01/function/BH_functional_annotation.txt" "$DELIVERY_DIR/T01/"
+if [ -f "${PROJECT_DIR}/annotation/T01/function/T01_functional_annotation.txt" ]; then
+    cp "${PROJECT_DIR}/annotation/T01/function/T01_functional_annotation.txt" "$DELIVERY_DIR/T01/"
 fi
 
-echo "BH文件:"
+echo "T01文件:"
 ls -lh "$DELIVERY_DIR/T01/"
-echo "BH基因数: $(grep -c '	gene	' $DELIVERY_DIR/T01/BH_genes.gff3)"
+echo "T01基因数: $(grep -c '	gene	' $DELIVERY_DIR/T01/T01_genes.gff3)"
 
-# 处理CK
+# 处理T02
 echo ""
 echo "=== 处理 T02 ==="
-cp "${PROJECT_DIR}/annotation/T02/structure/CK_genes.gff3" "$DELIVERY_DIR/T02/"
-cp "${PROJECT_DIR}/annotation/T02/structure/CK_genes.cds.fa" "$DELIVERY_DIR/T02/"
-cp "${PROJECT_DIR}/annotation/T02/structure/CK_genes.pep.fa" "$DELIVERY_DIR/T02/"
-cp "${PROJECT_DIR}/annotation/T02/structure/CK_id_mapping.tsv" "$DELIVERY_DIR/T02/"
+cp "${PROJECT_DIR}/annotation/T02/structure/T02_genes.gff3" "$DELIVERY_DIR/T02/"
+cp "${PROJECT_DIR}/annotation/T02/structure/T02_genes.cds.fa" "$DELIVERY_DIR/T02/"
+cp "${PROJECT_DIR}/annotation/T02/structure/T02_genes.pep.fa" "$DELIVERY_DIR/T02/"
+cp "${PROJECT_DIR}/annotation/T02/structure/T02_id_mapping.tsv" "$DELIVERY_DIR/T02/"
 
 # 检查功能注释文件
-if [ -f "${PROJECT_DIR}/annotation/T02/function/CK_functional_annotation.txt" ]; then
-    cp "${PROJECT_DIR}/annotation/T02/function/CK_functional_annotation.txt" "$DELIVERY_DIR/T02/"
+if [ -f "${PROJECT_DIR}/annotation/T02/function/T02_functional_annotation.txt" ]; then
+    cp "${PROJECT_DIR}/annotation/T02/function/T02_functional_annotation.txt" "$DELIVERY_DIR/T02/"
 fi
 
-echo "CK文件:"
+echo "T02文件:"
 ls -lh "$DELIVERY_DIR/T02/"
-echo "CK基因数: $(grep -c '	gene	' $DELIVERY_DIR/T02/CK_genes.gff3)"
+echo "T02基因数: $(grep -c '	gene	' $DELIVERY_DIR/T02/T02_genes.gff3)"
 
 # 创建README
 echo ""
@@ -60,22 +60,22 @@ targets注释结果交付包
 
 目录结构:
 ---------
-T01/ - BH样本注释结果
-  - BH_genes.gff3       : 基因结构注释（GFF3格式）
-  - BH_genes.cds.fa     : CDS序列（FASTA格式）
-  - BH_genes.pep.fa     : 蛋白质序列（FASTA格式）
-  - BH_id_mapping.tsv   : 基因ID映射表
+T01/ - T01样本注释结果
+  - T01_genes.gff3       : 基因结构注释（GFF3格式）
+  - T01_genes.cds.fa     : CDS序列（FASTA格式）
+  - T01_genes.pep.fa     : 蛋白质序列（FASTA格式）
+  - T01_id_mapping.tsv   : 基因ID映射表
 
-T02/ - CK样本注释结果
-  - CK_genes.gff3       : 基因结构注释（GFF3格式）
-  - CK_genes.cds.fa     : CDS序列（FASTA格式）
-  - CK_genes.pep.fa     : 蛋白质序列（FASTA格式）
-  - CK_id_mapping.tsv   : 基因ID映射表
+T02/ - T02样本注释结果
+  - T02_genes.gff3       : 基因结构注释（GFF3格式）
+  - T02_genes.cds.fa     : CDS序列（FASTA格式）
+  - T02_genes.pep.fa     : 蛋白质序列（FASTA格式）
+  - T02_id_mapping.tsv   : 基因ID映射表
 
 基因ID命名规则:
 --------------
 格式: {物种代码}{染色体号}G{基因编号}
-示例: BH01G000001 = BH物种 + 01号染色体 + 第1个基因
+示例: T0101G000001 = T01物种 + 01号染色体 + 第1个基因
 
 注释统计:
 ---------

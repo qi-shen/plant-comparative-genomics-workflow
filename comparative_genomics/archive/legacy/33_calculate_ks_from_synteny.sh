@@ -25,7 +25,7 @@ fi
 mkdir -p "$OUTPUT_DIR"
 
 # 定义物种对
-declare -a pairs=("BH CK" "BH TAU" "CK TAU")
+declare -a pairs=("T01 T02" "T01 C02" "T02 C02")
 
 echo ""
 echo "处理共线性anchors文件..."

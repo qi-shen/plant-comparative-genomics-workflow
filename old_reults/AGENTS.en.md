@@ -29,4 +29,4 @@ color_palette = {
 
 Prefer multi-core parallelism, heavy server utilization, background jobs, and periodic progress logs.
 
-Privacy: public docs/commits use sample IDs (T/C/O) only — no real Chinese or Latin species names.
+Naming: use sample IDs (T/C/O) throughout; the ID-to-species mapping lives in local config.

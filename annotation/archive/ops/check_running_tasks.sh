@@ -14,12 +14,12 @@ if ps aux | grep -q "[R]epeatModeler"; then
     ps aux | grep "[R]epeatModeler" | grep -v grep | awk '{print "  PID: "$2", CPU: "$3"%, 内存: "$4"%, 运行时间: "$10}'
     
     echo ""
-    echo "【BH RepeatModeler日志最新内容】"
-    tail -5 annotation/BH/repeat/repeatmodeler.log 2>/dev/null || echo "  日志文件不存在"
+    echo "【T01 RepeatModeler日志最新内容】"
+    tail -5 annotation/T01/repeat/repeatmodeler.log 2>/dev/null || echo "  日志文件不存在"
     
     echo ""
-    echo "【CK RepeatModeler日志最新内容】"
-    tail -5 annotation/CK/repeat/repeatmodeler.log 2>/dev/null || echo "  日志文件不存在"
+    echo "【T02 RepeatModeler日志最新内容】"
+    tail -5 annotation/T02/repeat/repeatmodeler.log 2>/dev/null || echo "  日志文件不存在"
 else
     echo "✗ RepeatModeler未运行"
 fi

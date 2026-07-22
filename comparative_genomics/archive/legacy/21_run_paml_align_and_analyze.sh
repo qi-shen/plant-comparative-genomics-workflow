@@ -73,10 +73,10 @@ for og_dir in "$ALIGN_DIR"/OG*; do
         }
     fi
     
-    # Step 3: 准备物种树（标记前景枝：BH或CK）
+    # Step 3: 准备物种树（标记前景枝：T01或T02）
     echo "  Step 3: 准备标记前景枝的物种树..."
     if [ ! -f "species_tree_marked.nwk" ]; then
-        # 从原始树中提取近缘类群部分，标记BH为前景
+        # 从原始树中提取近缘类群部分，标记T01为前景
         # 简化：使用原始树，在PAML控制文件中指定前景枝
         cp "$WORK_DIR/species_tree.nwk" "species_tree_marked.nwk"
     fi

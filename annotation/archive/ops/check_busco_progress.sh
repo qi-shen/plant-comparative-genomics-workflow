@@ -16,7 +16,7 @@ ps aux | grep -E "conda.*busco|busco.*proteins" | grep -v grep | head -5
 echo ""
 
 # 检查输出目录
-for species in "BH" "CK"; do
+for species in "T01" "T02"; do
     result_dir="${BUSCO_DIR}/${species}"
     echo "【${species} 样本】"
     echo "输出目录: ${result_dir}"

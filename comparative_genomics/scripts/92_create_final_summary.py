@@ -74,13 +74,13 @@ def main():
         cafe_df = pd.read_csv(cafe_file, sep='\t')
         report.append(f"- **显著变化家族**: {len(cafe_df)}个（p < 0.05）\n")
         
-        # TCH扩张统计
+        # C03扩张统计
         if 'C03<6>' in cafe_df.columns:
             tch_expanded = cafe_df[cafe_df['C03<6>'] > 0]
-            report.append(f"- **TCH显著扩张家族**: {len(tch_expanded)}个\n")
+            report.append(f"- **C03显著扩张家族**: {len(tch_expanded)}个\n")
             if len(tch_expanded) > 0:
                 total_tch_gain = tch_expanded['C03<6>'].sum()
-                report.append(f"- **TCH新增基因数**: +{total_tch_gain}个\n")
+                report.append(f"- **C03新增基因数**: +{total_tch_gain}个\n")
     
     report.append("- **Lambda值**: 2.009\n\n")
     
@@ -119,11 +119,11 @@ def main():
     # 7. 关键发现
     report.append("## 7. 关键科学发现\n\n")
     report.append("### 7.1 物种关系\n")
-    report.append("- BH和CK亲缘关系最近\n")
+    report.append("- T01和T02亲缘关系最近\n")
     report.append("- 共线性关系良好\n\n")
     
     report.append("### 7.2 基因家族动态\n")
-    report.append("- **TCH显著扩张**: 854个家族，+3,880个基因\n")
+    report.append("- **C03显著扩张**: 854个家族，+3,880个基因\n")
     report.append("- 可能与其适应性相关\n")
     report.append("- 994个家族发生显著变化\n\n")
     
@@ -151,7 +151,7 @@ def main():
     report.append("1. ✅ 基因家族鉴定: 39,321个家族\n")
     report.append("2. ✅ 共线性分析: 155,442个同源基因对\n")
     report.append("3. ✅ 系统发育: 物种树已构建\n")
-    report.append("4. ✅ 家族动态: 994个显著变化家族（TCH扩张854个）\n")
+    report.append("4. ✅ 家族动态: 994个显著变化家族（C03扩张854个）\n")
     report.append("5. ✅ WGD分析: 9,848个Ks值已计算\n")
     report.append("6. ✅ 正选择分析: 部分完成\n\n")
     

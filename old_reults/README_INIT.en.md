@@ -28,7 +28,7 @@ Initialization checks conda and key directories, then writes/updates a local env
 | `RNA_DIR` | RNA-seq |
 | `T01_GENOME` / `T02_GENOME` | Target genomes |
 
-## Privacy
+## Configuration & data
 
-- Public repo keeps workflow + IDs (T/C/O) only.
-- Put real names, Latin names, and identifiable paths in local `species_list.csv` / `.project_env`; do not commit them.
+- The tracked repo keeps the workflow and placeholder IDs (T/C/O) only.
+- Put the species mapping and machine-specific paths in local `species_list.csv` / `.project_env`; both are gitignored so each clone keeps its own configuration.

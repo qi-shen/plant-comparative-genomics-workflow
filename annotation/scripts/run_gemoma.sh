@@ -76,7 +76,7 @@ process_species() {
     ref_gffs+=("${RESULTS_DIR}/C01/hs.chrom.genome.gff")
     ref_peps+=("${RESULTS_DIR}/C01/C01.pep.fa")
     
-    ref_gffs+=("${RESULTS_DIR}/C02/tau.gff3")
+    ref_gffs+=("${RESULTS_DIR}/C02/C02.gff3")
     ref_peps+=("${RESULTS_DIR}/C02/protein.fa")
     
     ref_gffs+=("${RESULTS_DIR}/C03/genes.gff3")
@@ -193,7 +193,7 @@ main() {
         exit 1
     fi
     
-    # 为BH和CK创建tblastn数据库
+    # 为T01和T02创建tblastn数据库
     log_step "准备tblastn数据库..."
     for species in T01 T02; do
         local masked_genome1="${ANNOTATION_DIR}/${species}/${species}_genome.masked.fa"

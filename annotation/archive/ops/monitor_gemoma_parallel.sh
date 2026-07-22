@@ -44,7 +44,7 @@ echo ""
 
 # 3. 任务进度
 echo "【任务进度】"
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     for ref in hongsha ganmeng chinensis; do
         gemoma_file="${ANNOTATION_DIR}/${species}/structure/gemoma/${ref}/${ref}_gemoma.gff"

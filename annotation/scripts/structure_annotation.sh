@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# T01/CK结构注释脚本
+# T01/T02结构注释脚本
 # 同源预测、从头预测、转录组证据整合、EVM整合
 
 set -e
@@ -112,7 +112,7 @@ process_species() {
     ref_gffs+=("${RESULTS_DIR}/C01/hs.chrom.genome.gff")
     ref_peps+=("${RESULTS_DIR}/C01/C01.pep.fa")
     
-    ref_gffs+=("${RESULTS_DIR}/C02/tau.gff3")
+    ref_gffs+=("${RESULTS_DIR}/C02/C02.gff3")
     ref_peps+=("${RESULTS_DIR}/C02/protein.fa")
     
     ref_gffs+=("${RESULTS_DIR}/C03/genes.gff3")

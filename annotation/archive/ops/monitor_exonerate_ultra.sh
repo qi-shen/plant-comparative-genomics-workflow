@@ -33,7 +33,7 @@ echo "  系统负载: $(uptime | awk -F'load average:' '{print $2}')"
 echo ""
 echo "【任务进度】"
 
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     
     work_dir="${ANNOTATION_DIR}/${species}/structure/exonerate_ultra"

@@ -5,7 +5,7 @@
 set -e
 
 PROJECT_DIR="${PROJECT_ROOT}"
-SPECIES=${1:-"T01"}  # 默认BH，可指定CK
+SPECIES=${1:-"T01"}  # 默认T01，可指定T02
 
 BUSCO_DIR="${PROJECT_DIR}/annotation/evaluation/busco/${SPECIES}/${SPECIES}/run_embryophyta_odb10"
 OUTPUT_DIR="${PROJECT_DIR}/annotation/improvement/${SPECIES}"

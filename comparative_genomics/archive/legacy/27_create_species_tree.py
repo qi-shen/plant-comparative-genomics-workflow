@@ -19,11 +19,11 @@ def main():
     
     # 简化：直接创建一个新的树（只包含5个物种）
     # 基于原始树中这5个物种的关系
-    # BH和CK最近，然后是TCH，然后是TAU，最后是RSO
+    # T01和T02最近，然后是C03，然后是C02，最后是C01
     
     # 从原始树中提取这5个物种的分支长度
     # 简化处理：使用等距树
-    new_tree = "((BH:0.00177,CK:0.00270):0.00100,TCH:0.00328,TAU:0.00388,RSO:0.08983);"
+    new_tree = "((T01:0.00177,T02:0.00270):0.00100,C03:0.00328,C02:0.00388,C01:0.08983);"
     
     # 保存新树
     output_file = "/path/to/project_root/comparative_genomics/06_selection/species_tree_target.nwk"

@@ -2,7 +2,7 @@
 
 **语言：** [English](CLAUDE.en.md) | [中文](CLAUDE.zh-CN.md)
 
-脱敏流程说明（不含真实物种名）。
+流程说明。样本编号（T/C/O）为模板占位符，真实数据映射见 config/species.csv。
 
 ## 概述
 

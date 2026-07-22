@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 将EVM输出转换为标准GFF3格式
-基因ID格式: BH01G000100
+基因ID格式: T0101G000100
 """
 
 import sys

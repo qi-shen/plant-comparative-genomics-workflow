@@ -70,7 +70,7 @@ process_species() {
     ref_gffs["hongsha"]="${RESULTS_DIR}/C01/hs.chrom.genome.gff"
     ref_peps["hongsha"]="${RESULTS_DIR}/C01/C01.pep.fa"
     
-    ref_gffs["ganmeng"]="${RESULTS_DIR}/C02/tau.gff3"
+    ref_gffs["ganmeng"]="${RESULTS_DIR}/C02/C02.gff3"
     ref_peps["ganmeng"]="${RESULTS_DIR}/C02/protein.fa"
     
     ref_gffs["C03"]="${RESULTS_DIR}/C03/genes.gff3"
@@ -223,7 +223,7 @@ main() {
         exit 1
     fi
     
-    # 处理BH和CK
+    # 处理T01和T02
     process_species "T01"
     
     echo ""

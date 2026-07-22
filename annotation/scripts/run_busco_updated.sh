@@ -10,8 +10,8 @@ mkdir -p "$BUSCO_BASE_DIR"
 mkdir -p "$LOG_DIR"
 
 declare -A species_peps
-species_peps[T01]="${PROJECT_ROOT}/annotation/T01/pasa_update/BH_pasa_updated_filtered.pep.fa"
-species_peps[T02]="${PROJECT_ROOT}/annotation/T02/pasa_update/CK_pasa_updated_filtered.pep.fa"
+species_peps[T01]="${PROJECT_ROOT}/annotation/T01/pasa_update/T01_pasa_updated_filtered.pep.fa"
+species_peps[T02]="${PROJECT_ROOT}/annotation/T02/pasa_update/T02_pasa_updated_filtered.pep.fa"
 
 run_busco() {
     local pep_file=$1

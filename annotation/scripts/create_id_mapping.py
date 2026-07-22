@@ -92,7 +92,7 @@ def create_mapping(augustus_gff, new_gff, output_file):
             new_id = pos_to_new[key]
             # 基因ID映射
             mapping[old_id] = new_id
-            # 转录本ID映射 (g1 -> g1.t1 对应 BH01G000100 -> BH01G000100.1)
+            # 转录本ID映射 (g1 -> g1.t1 对应 T0101G000100 -> T0101G000100.1)
             mapping[f"{old_id}.t1"] = f"{new_id}.1"
             matched += 1
     

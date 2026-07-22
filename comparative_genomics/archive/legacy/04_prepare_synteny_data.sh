@@ -14,23 +14,23 @@ echo "=========================================="
 
 # 定义物种GFF和CDS文件路径
 declare -A GFF_FILES=(
-    ["BH"]="new_anno/BH.final.gff3"
-    ["CK"]="new_anno/CK.final.gff3"
-    ["TAU"]="old_reults/results/C02/tau.gff3"
-    ["TCH"]="old_reults/results/C03/Tchinensis.gff3"
-    ["RSO"]="old_reults/results/C01/hs.chrom.genome.gff"
+    ["T01"]="new_anno/T01.final.gff3"
+    ["T02"]="new_anno/T02.final.gff3"
+    ["C02"]="old_reults/results/C02/C02.gff3"
+    ["C03"]="old_reults/results/C03/C03.gff3"
+    ["C01"]="old_reults/results/C01/hs.chrom.genome.gff"
 )
 
 declare -A CDS_FILES=(
-    ["BH"]="new_anno/BH.final.cds.fa"
-    ["CK"]="new_anno/CK.final.cds.fa"
-    ["TAU"]="old_reults/results/C02/tau.longest_cds.fasta"
-    ["TCH"]="old_reults/results/C03/Tchinensis_cds.fa"
-    ["RSO"]="old_reults/results/C01/C01.cds.fa"
+    ["T01"]="new_anno/T01.final.cds.fa"
+    ["T02"]="new_anno/T02.final.cds.fa"
+    ["C02"]="old_reults/results/C02/C02.longest_cds.fasta"
+    ["C03"]="old_reults/results/C03/C03_cds.fa"
+    ["C01"]="old_reults/results/C01/C01.cds.fa"
 )
 
 # 处理每个物种
-for sp in BH CK TAU TCH RSO; do
+for sp in T01 T02 C02 C03 C01; do
     echo ""
     echo "处理 $sp..."
     

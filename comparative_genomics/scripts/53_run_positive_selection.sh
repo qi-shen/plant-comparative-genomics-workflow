@@ -1,6 +1,6 @@
 #!/bin/bash
 # 正选择分析 - 近缘类群5物种
-# BH和CK作为前景枝，C02/C03/RSO作为背景枝
+# T01和T02作为前景枝，C02/C03/C01作为背景枝
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck disable=SC1091
@@ -214,15 +214,15 @@ for aln in aln_files:
 print(f"  已转换 {converted} 个比对文件为PHYLIP格式")
 PYEOF
 
-# Step 5: 创建物种树文件 (BH和CK标记为前景枝)
+# Step 5: 创建物种树文件 (T01和T02标记为前景枝)
 echo ""
 echo "Step 5: 创建物种树..."
 
-cat > "$WORK_DIR/paml_input/tree_BH_foreground.nwk" << 'TREE'
+cat > "$WORK_DIR/paml_input/tree_T01_foreground.nwk" << 'TREE'
 ((T01 #1, T02), (C02, (C03, C01)));
 TREE
 
-cat > "$WORK_DIR/paml_input/tree_BH_CK_foreground.nwk" << 'TREE'
+cat > "$WORK_DIR/paml_input/tree_T01_T02_foreground.nwk" << 'TREE'
 ((T01 #1, T02 #1), (C02, (C03, C01)));
 TREE
 
@@ -281,7 +281,7 @@ for phy in ../paml_input/OG*.phy; do
 
         # 复制文件
         cp "$phy" seq.phy
-        cp ../paml_input/tree_BH_CK_foreground.nwk tree.nwk
+        cp ../paml_input/tree_T01_T02_foreground.nwk tree.nwk
 
         # 创建控制文件
         cat > codeml.ctl << EOF

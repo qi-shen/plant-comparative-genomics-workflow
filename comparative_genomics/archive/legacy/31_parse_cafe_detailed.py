@@ -27,13 +27,13 @@ def main():
     print(f"\n显著变化的家族数: {len(significant)}")
     print(f"列名: {list(significant.columns)}")
     
-    # 近缘类群物种（注意列名格式可能是 'BH<8>', 'CK<7>' 等）
+    # 近缘类群物种（注意列名格式可能是 'T01<8>', 'T02<7>' 等）
     target_clade_species_map = {
-        'BH': ['BH<8>', 'BH'],
-        'CK': ['CK<7>', 'CK'],
-        'TAU': ['TAU<5>', 'TAU'],
-        'TCH': ['TCH<6>', 'TCH'],
-        'RSO': ['RSO<4>', 'RSO']
+        'T01': ['T01<8>', 'T01'],
+        'T02': ['T02<7>', 'T02'],
+        'C02': ['C02<5>', 'C02'],
+        'C03': ['C03<6>', 'C03'],
+        'C01': ['C01<4>', 'C01']
     }
     
     # 找到实际存在的列名

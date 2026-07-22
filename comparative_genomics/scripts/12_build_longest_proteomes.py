@@ -34,16 +34,16 @@ def root_by_regex(pattern: str) -> Callable[[str], str]:
 # 物种专用规则（基于当前ID格式抽样）
 RULES: Dict[str, Callable[[str], str]] = {
     # clearly transcript suffix
-    "O01": root_by_regex(r"^(ATH_transcript:[^.]+)\.\d+$"),
-    "C05": root_by_regex(r"^(CQU_.+)\.\d+$"),
-    "C11": root_by_regex(r"^(SMO_[^.]+)\.\d+$"),
-    "O02": root_by_regex(r"^(VVI_.+)\.t\d+$"),
-    "C03": root_by_regex(r"^(TCH_TC\d+G\d+)T\d+$"),
-    "C09": root_by_regex(r"^(HAM_.+)\.t\d+$"),
-    "C07": root_by_regex(r"^(GPA_.+)\.m\d+$"),
+    "O01": root_by_regex(r"^(O01_transcript:[^.]+)\.\d+$"),
+    "C05": root_by_regex(r"^(C05_.+)\.\d+$"),
+    "C11": root_by_regex(r"^(C11_[^.]+)\.\d+$"),
+    "O02": root_by_regex(r"^(O02_.+)\.t\d+$"),
+    "C03": root_by_regex(r"^(C03_TC\d+G\d+)T\d+$"),
+    "C09": root_by_regex(r"^(C09_.+)\.t\d+$"),
+    "C07": root_by_regex(r"^(C07_.+)\.m\d+$"),
     "C08": root_identity,  # 新版HR基因组无转录本后缀，35926基因=35926蛋白
-    "C04": root_by_regex(r"^(APA_.+)-mRNA-\d+$"),
-    "C01": root_by_regex(r"^(RSO_.+)\.p\d+$"),
+    "C04": root_by_regex(r"^(C04_.+)-mRNA-\d+$"),
+    "C01": root_by_regex(r"^(C01_.+)\.p\d+$"),
     # 这两个按样本看像“evm.model.Chrxx.<gene序号>”，不是转录本后缀，必须保留原ID
     "C02": root_identity,
     "C06": root_identity,

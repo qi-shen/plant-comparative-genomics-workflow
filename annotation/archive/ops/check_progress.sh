@@ -32,7 +32,7 @@ if [ $gemoma_count -gt 0 ]; then
     fi
 else
     # 检查是否已完成
-    if [ -f "${ANNOTATION_DIR}/BH/structure/BH_gemoma_merged.gff3" ] && [ -f "${ANNOTATION_DIR}/CK/structure/CK_gemoma_merged.gff3" ]; then
+    if [ -f "${ANNOTATION_DIR}/T01/structure/T01_gemoma_merged.gff3" ] && [ -f "${ANNOTATION_DIR}/T02/structure/T02_gemoma_merged.gff3" ]; then
         echo -e "  ${GREEN}✅ 已完成${NC}"
     else
         echo -e "  ${YELLOW}⚠️  未运行或已失败${NC}"
@@ -40,7 +40,7 @@ else
 fi
 
 # 显示GeMoMa输出文件
-for species in BH CK; do
+for species in T01 T02; do
     gemoma_file="${ANNOTATION_DIR}/${species}/structure/${species}_gemoma_merged.gff3"
     if [ -f "$gemoma_file" ] && [ -s "$gemoma_file" ]; then
         size=$(du -h "$gemoma_file" | cut -f1)
@@ -54,7 +54,7 @@ echo ""
 
 # 2. 检查tblastn比对结果
 echo "【2️⃣ tblastn比对结果】"
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     gemoma_dir="${ANNOTATION_DIR}/${species}/structure/gemoma"
     if [ -d "$gemoma_dir" ]; then
@@ -77,7 +77,7 @@ echo ""
 
 # 3. 检查所有证据文件
 echo "【3️⃣ 证据文件状态】"
-for species in BH CK; do
+for species in T01 T02; do
     echo "  【$species】"
     
     # Augustus
@@ -124,7 +124,7 @@ echo "【4️⃣ 下一步】"
 if [ $gemoma_count -gt 0 ]; then
     echo "  ⏳ 等待GeMoMa完成..."
     echo "  📊 监控命令: tail -f ${PROJECT_DIR}/logs/gemoma_*.log"
-elif [ -f "${ANNOTATION_DIR}/BH/structure/BH_gemoma_merged.gff3" ] && [ -f "${ANNOTATION_DIR}/CK/structure/CK_gemoma_merged.gff3" ]; then
+elif [ -f "${ANNOTATION_DIR}/T01/structure/T01_gemoma_merged.gff3" ] && [ -f "${ANNOTATION_DIR}/T02/structure/T02_gemoma_merged.gff3" ]; then
     echo "  ✅ GeMoMa已完成!"
     echo "  💡 运行EVM整合: bash ${PROJECT_DIR}/scripts/run_evm_integration.sh"
 else

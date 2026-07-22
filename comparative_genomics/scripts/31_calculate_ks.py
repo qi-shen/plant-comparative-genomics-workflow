@@ -182,7 +182,7 @@ def main():
     total_pairs = 0
     total_success = 0
     
-    for pair_name in ['BH_CK', 'BH_TAU', 'CK_TAU']:
+    for pair_name in ['T01_T02', 'T01_C02', 'T02_C02']:
         pair_dir = os.path.join(base_dir, pair_name)
         input_file = os.path.join(pair_dir, "kaks_input.fa")
         

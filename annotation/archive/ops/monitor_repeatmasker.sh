@@ -23,8 +23,8 @@ echo ""
 check_processes() {
     echo -e "${BLUE}【进程状态】${NC}"
     
-    local main_pid=$(pgrep -f "RepeatMasker.*BH.Chr.final.fa" | head -1)
-    local process_pid=$(pgrep -f "ProcessRepeats.*BH" | head -1)
+    local main_pid=$(pgrep -f "RepeatMasker.*T01.Chr.final.fa" | head -1)
+    local process_pid=$(pgrep -f "ProcessRepeats.*T01" | head -1)
     
     if [ -n "$main_pid" ]; then
         local etime=$(ps -o etime= -p "$main_pid" 2>/dev/null | tr -d ' ')
@@ -49,39 +49,39 @@ check_processes() {
     echo ""
 }
 
-# 检查BH输出文件
+# 检查T01输出文件
 check_bh_output() {
-    echo -e "${BLUE}【BH基因组处理状态】${NC}"
+    echo -e "${BLUE}【T01基因组处理状态】${NC}"
     
-    local work_dir="${ANNOTATION_DIR}/BH/repeat/RM_1520083.FriDec191059142025"
+    local work_dir="${ANNOTATION_DIR}/T01/repeat/RM_1520083.FriDec191059142025"
     
     if [ -d "$work_dir" ]; then
         # 检查.out文件
-        if [ -f "${work_dir}/BH.Chr.final.fa.out" ]; then
-            local size=$(du -h "${work_dir}/BH.Chr.final.fa.out" | cut -f1)
-            local mtime=$(stat -c %y "${work_dir}/BH.Chr.final.fa.out" | cut -d' ' -f2 | cut -d'.' -f1)
-            echo -e "  ${GREEN}✓${NC} 注释报告: BH.Chr.final.fa.out ($size, 更新: $mtime)"
+        if [ -f "${work_dir}/T01.Chr.final.fa.out" ]; then
+            local size=$(du -h "${work_dir}/T01.Chr.final.fa.out" | cut -f1)
+            local mtime=$(stat -c %y "${work_dir}/T01.Chr.final.fa.out" | cut -d' ' -f2 | cut -d'.' -f1)
+            echo -e "  ${GREEN}✓${NC} 注释报告: T01.Chr.final.fa.out ($size, 更新: $mtime)"
         fi
         
         # 检查.gff文件
-        if [ -f "${work_dir}/BH.Chr.final.fa.out.gff" ]; then
-            local size=$(du -h "${work_dir}/BH.Chr.final.fa.out.gff" | cut -f1)
-            local mtime=$(stat -c %y "${work_dir}/BH.Chr.final.fa.out.gff" | cut -d' ' -f2 | cut -d'.' -f1)
-            echo -e "  ${GREEN}✓${NC} GFF注释: BH.Chr.final.fa.out.gff ($size, 更新: $mtime)"
+        if [ -f "${work_dir}/T01.Chr.final.fa.out.gff" ]; then
+            local size=$(du -h "${work_dir}/T01.Chr.final.fa.out.gff" | cut -f1)
+            local mtime=$(stat -c %y "${work_dir}/T01.Chr.final.fa.out.gff" | cut -d' ' -f2 | cut -d'.' -f1)
+            echo -e "  ${GREEN}✓${NC} GFF注释: T01.Chr.final.fa.out.gff ($size, 更新: $mtime)"
         fi
         
         # 检查.masked文件
-        if [ -f "${work_dir}/BH.Chr.final.fa.masked" ]; then
-            local size=$(du -h "${work_dir}/BH.Chr.final.fa.masked" | cut -f1)
-            echo -e "  ${GREEN}✓${NC} 掩蔽基因组: BH.Chr.final.fa.masked ($size) - ${GREEN}已完成！${NC}"
+        if [ -f "${work_dir}/T01.Chr.final.fa.masked" ]; then
+            local size=$(du -h "${work_dir}/T01.Chr.final.fa.masked" | cut -f1)
+            echo -e "  ${GREEN}✓${NC} 掩蔽基因组: T01.Chr.final.fa.masked ($size) - ${GREEN}已完成！${NC}"
         else
             echo -e "  ${YELLOW}⏳${NC} 掩蔽基因组: 生成中..."
         fi
         
         # 检查.cat.gz文件
-        if [ -f "${work_dir}/BH.Chr.final.fa.cat.gz" ]; then
-            local size=$(du -h "${work_dir}/BH.Chr.final.fa.cat.gz" | cut -f1)
-            echo -e "  ${BLUE}ℹ${NC} 中间文件: BH.Chr.final.fa.cat.gz ($size)"
+        if [ -f "${work_dir}/T01.Chr.final.fa.cat.gz" ]; then
+            local size=$(du -h "${work_dir}/T01.Chr.final.fa.cat.gz" | cut -f1)
+            echo -e "  ${BLUE}ℹ${NC} 中间文件: T01.Chr.final.fa.cat.gz ($size)"
         fi
     else
         echo -e "  ${RED}✗${NC} 工作目录不存在"
@@ -90,17 +90,17 @@ check_bh_output() {
     echo ""
 }
 
-# 检查CK状态
+# 检查T02状态
 check_ck_status() {
-    echo -e "${BLUE}【CK基因组处理状态】${NC}"
+    echo -e "${BLUE}【T02基因组处理状态】${NC}"
     
-    local ck_pid=$(pgrep -f "RepeatMasker.*CK.Chr.final.fa" | head -1)
+    local ck_pid=$(pgrep -f "RepeatMasker.*T02.Chr.final.fa" | head -1)
     
     if [ -n "$ck_pid" ]; then
         local etime=$(ps -o etime= -p "$ck_pid" 2>/dev/null | tr -d ' ')
-        echo -e "  ${GREEN}✓${NC} CK处理已开始 (PID: $ck_pid, 运行时间: $etime)"
+        echo -e "  ${GREEN}✓${NC} T02处理已开始 (PID: $ck_pid, 运行时间: $etime)"
     else
-        echo -e "  ${YELLOW}⏸️${NC} 等待BH完成后开始"
+        echo -e "  ${YELLOW}⏸️${NC} 等待T01完成后开始"
     fi
     
     echo ""

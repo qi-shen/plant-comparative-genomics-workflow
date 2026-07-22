@@ -14,7 +14,7 @@ def update_annotation(input_file, mapping_file, output_file):
     
     # 创建从mRNA ID到新ID的映射
     # EVM的mRNA ID格式: evm.model.Chr01.1
-    # 我们需要映射到 BH01G000001.1
+    # 我们需要映射到 T0101G000001.1
     id_map = {}
     for _, row in mapping_df.iterrows():
         old_id = row['old_id']

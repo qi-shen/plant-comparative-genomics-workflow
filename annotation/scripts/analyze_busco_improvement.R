@@ -204,19 +204,19 @@ cat(sprintf("\n改进建议报告已保存至: %s\n", report_file))
 # 导出片段化和缺失的BUSCO ID列表
 if (!is.null(bh_result)) {
   write.table(bh_result$fragmented$Busco.id, 
-              file.path(output_dir, "BH_fragmented_busco_ids.txt"),
+              file.path(output_dir, "T01_fragmented_busco_ids.txt"),
               row.names = FALSE, col.names = FALSE, quote = FALSE)
   write.table(bh_result$missing$Busco.id, 
-              file.path(output_dir, "BH_missing_busco_ids.txt"),
+              file.path(output_dir, "T01_missing_busco_ids.txt"),
               row.names = FALSE, col.names = FALSE, quote = FALSE)
 }
 
 if (!is.null(ck_result)) {
   write.table(ck_result$fragmented$Busco.id, 
-              file.path(output_dir, "CK_fragmented_busco_ids.txt"),
+              file.path(output_dir, "T02_fragmented_busco_ids.txt"),
               row.names = FALSE, col.names = FALSE, quote = FALSE)
   write.table(ck_result$missing$Busco.id, 
-              file.path(output_dir, "CK_missing_busco_ids.txt"),
+              file.path(output_dir, "T02_missing_busco_ids.txt"),
               row.names = FALSE, col.names = FALSE, quote = FALSE)
 }
 

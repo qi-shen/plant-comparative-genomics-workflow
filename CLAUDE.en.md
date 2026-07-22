@@ -2,7 +2,7 @@
 
 **Language:** [English](CLAUDE.en.md) | [中文](CLAUDE.zh-CN.md)
 
-Anonymized workflow notes (no real species names).
+Workflow notes. Sample IDs (T/C/O) are template placeholders mapped to real data in config/species.csv.
 
 ## Overview
 

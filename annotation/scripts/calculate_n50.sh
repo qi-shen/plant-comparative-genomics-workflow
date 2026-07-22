@@ -147,33 +147,33 @@ main() {
     
     # 比较物种
     species_genomes["C01"]="${RESULTS_DIR}/C01/hs.chrom.genome.final.fa"
-    species_genomes["C02"]="${RESULTS_DIR}/C02/tau_genome.fasta"
+    species_genomes["C02"]="${RESULTS_DIR}/C02/C02_genome.fasta"
     species_genomes["C03"]="${RESULTS_DIR}/C03/genome.fa"
-    species_genomes["C04"]="${RESULTS_DIR}/C04/Haplome_1/AmaPa_v01_hap1.fasta"
-    species_genomes["C05"]="${RESULTS_DIR}/C05/0321072RM_v1.fasta"
+    species_genomes["C04"]="${RESULTS_DIR}/C04/hap1/C04_hap1.fasta"
+    species_genomes["C05"]="${RESULTS_DIR}/C05/C05.fasta"
     species_genomes["C06"]="${RESULTS_DIR}/C06/bxgz.hap1.fa"
     species_genomes["C07"]="${RESULTS_DIR}/C07/genome.fa"
-    species_genomes["C08"]="${RESULTS_DIR}/C08/AYY_all_genome.fasta"
+    species_genomes["C08"]="${RESULTS_DIR}/C08/C08_genome.fasta"
     species_genomes["C09"]="${RESULTS_DIR}/C09/genome_v2.fasta"
-    species_genomes["C10"]="${RESULTS_DIR}/C10/GWHCBIU00000000.genome.fasta"
+    species_genomes["C10"]="${RESULTS_DIR}/C10/C10.genome.fasta"
     species_genomes["O01"]="${RESULTS_DIR}/O01/O01.TAIR10.dna.toplevel.fa"
     species_genomes["O02"]="${RESULTS_DIR}/O02/PN40024.T21.fa"
     species_genomes["C11"]="${RESULTS_DIR}/C11/hap1.fa"
     
-    # BH和CK
+    # T01和T02
     if [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa.gz" ]; then
         # 临时解压用于计算
-        log_info "临时解压BH基因组..."
-        gunzip -c "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa.gz" > /tmp/BH_temp.fa
-        species_genomes["T01"]="/tmp/BH_temp.fa"
+        log_info "临时解压T01基因组..."
+        gunzip -c "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa.gz" > /tmp/T01_temp.fa
+        species_genomes["T01"]="/tmp/T01_temp.fa"
     elif [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa" ]; then
         species_genomes["T01"]="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T01.Chr.final.fa"
     fi
     
     if [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa.gz" ]; then
-        log_info "临时解压CK基因组..."
-        gunzip -c "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa.gz" > /tmp/CK_temp.fa
-        species_genomes["T02"]="/tmp/CK_temp.fa"
+        log_info "临时解压T02基因组..."
+        gunzip -c "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa.gz" > /tmp/T02_temp.fa
+        species_genomes["T02"]="/tmp/T02_temp.fa"
     elif [ -f "${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa" ]; then
         species_genomes["T02"]="${RESULTS_DIR}/targets 测序组装物种 T01_T02/基因组/T02.Chr.final.fa"
     fi
@@ -196,7 +196,7 @@ main() {
     done
     
     # 清理临时文件
-    rm -f /tmp/BH_temp.fa /tmp/CK_temp.fa
+    rm -f /tmp/T01_temp.fa /tmp/T02_temp.fa
     
     # 生成汇总表
     generate_summary

@@ -20,7 +20,7 @@ conda activate wgd
 mkdir -p "$WORK_DIR"/{ks_distribution,results}
 
 # 分析近缘类群5个物种
-for sp in BH CK TAU TCH RSO; do
+for sp in T01 T02 C02 C03 C01; do
     echo ""
     echo "=========================================="
     echo "分析 $sp"

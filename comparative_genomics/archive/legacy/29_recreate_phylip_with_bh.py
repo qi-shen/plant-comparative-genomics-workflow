@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-重新创建phylip文件，确保包含BH物种
+重新创建phylip文件，确保包含T01物种
 """
 
 import os
@@ -10,7 +10,7 @@ def main():
     base_dir = "/path/to/project_root/comparative_genomics/06_selection/paml_alignments"
     
     print("=" * 60)
-    print("重新创建phylip文件（包含BH）")
+    print("重新创建phylip文件（包含T01）")
     print("=" * 60)
     
     # 处理每个OG目录

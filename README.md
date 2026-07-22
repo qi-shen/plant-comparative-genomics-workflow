@@ -4,7 +4,7 @@
 
 A reusable, **species-agnostic** pipeline for plant genome annotation and multi-species comparative genomics.
 
-This repository tracks **scripts, configuration templates, and documentation only**. Genomes, RNA-seq, OrthoFinder outputs, and other large artifacts are gitignored. Public docs use sample codes (`T` / `C` / `O`) instead of real species names.
+This repository tracks **scripts, configuration templates, and documentation only**. Genomes, RNA-seq, OrthoFinder outputs, and other large artifacts are gitignored, so the repo stays a lightweight, portable template. Sample codes (`T` / `C` / `O`) are template placeholders mapped to real data in local config.
 
 ---
 
@@ -80,7 +80,7 @@ Run everything:
 | `C01`–`C11` | Comparative species |
 | `O01`–`O02` | Outgroups |
 
-Keep real filenames and absolute paths in local `config/species.csv` / `.project_env` only. Do not commit identifiable names to the public tree.
+Map each ID to a real species and path in local `config/species.csv` / `.project_env`; the scripts read the mapping from there rather than hard-coding it.
 
 ## Dependencies
 
@@ -102,9 +102,12 @@ Coding / figure style notes: [`old_reults/AGENTS.en.md`](old_reults/AGENTS.en.md
 - [Agent / command notes](CLAUDE.en.md)
 - [Init guide](old_reults/README_INIT.en.md)
 
-## Privacy
+## Configuration & data
 
-The public repository is intentionally anonymized. Share data and private species maps separately from this workflow repo.
+The species-to-path mapping and machine-specific settings live in local config
+(`config/species.csv`, `.project_env`, both gitignored), keeping the tracked
+code portable and data-agnostic. Version the workflow here; keep genomes,
+annotations, and results in your own data storage.
 
 ## License
 

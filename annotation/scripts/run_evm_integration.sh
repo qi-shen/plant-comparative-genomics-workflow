@@ -299,7 +299,7 @@ main() {
     
     echo ""
     
-    # 处理BH和CK
+    # 处理T01和T02
     process_species "T01"
     
     echo ""

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Initialize local env for the comparative-genomics workflow (anonymized).
+# Initialize local env for the comparative-genomics workflow.
 
 set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

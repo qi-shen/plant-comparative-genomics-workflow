@@ -130,7 +130,7 @@ main() {
     
     cd "$PROJECT_DIR"
     
-    # 提取BH和CK的序列
+    # 提取T01和T02的序列
     extract_sequences "T01"
     echo ""
     extract_sequences "T02"

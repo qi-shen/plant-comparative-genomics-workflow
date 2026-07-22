@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # BUSCO评估脚本 - 评估注释结果
-# 对BH和CK的注释蛋白质序列进行BUSCO评估
+# 对T01和T02的注释蛋白质序列进行BUSCO评估
 
 set -e
 
@@ -203,8 +203,8 @@ main() {
     
     # 定义蛋白质文件
     declare -A species_peps
-    species_peps["T01"]="${PROJECT_DIR}/annotation/T01/structure/BH_genes.pep.fa"
-    species_peps["T02"]="${PROJECT_DIR}/annotation/T02/structure/CK_genes.pep.fa"
+    species_peps["T01"]="${PROJECT_DIR}/annotation/T01/structure/T01_genes.pep.fa"
+    species_peps["T02"]="${PROJECT_DIR}/annotation/T02/structure/T02_genes.pep.fa"
     
     # 运行BUSCO评估（并行运行）
     local success_count=0

@@ -233,7 +233,7 @@ main() {
     
     log_info "EVM命令: $evm_cmd"
     
-    # 处理BH和CK
+    # 处理T01和T02
     for species in T01 T02; do
         process_species "$species"
         echo ""

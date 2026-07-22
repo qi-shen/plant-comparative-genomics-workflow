@@ -23,8 +23,8 @@ mkdir -p "$BUSCO_DIR" "${PROJECT_DIR}/logs"
 
 # 定义蛋白质文件
 declare -A species_peps
-species_peps["T01"]="${PROJECT_DIR}/annotation/T01/structure/BH_genes.pep.fa"
-species_peps["T02"]="${PROJECT_DIR}/annotation/T02/structure/CK_genes.pep.fa"
+species_peps["T01"]="${PROJECT_DIR}/annotation/T01/structure/T01_genes.pep.fa"
+species_peps["T02"]="${PROJECT_DIR}/annotation/T02/structure/T02_genes.pep.fa"
 
 pep_file="${species_peps[$SPECIES]}"
 output_dir="${BUSCO_DIR}/${SPECIES}"

@@ -199,7 +199,7 @@ main() {
     
     # 对每个物种和每个数据库运行BLAST（并行运行不同物种）
     for db in "${databases[@]}"; do
-        # 后台并行运行BH和CK
+        # 后台并行运行T01和T02
         for species in T01 T02; do
             run_blast "$species" "$db" &
         done

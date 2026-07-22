@@ -26,16 +26,16 @@ def main():
     
     # 读取anchors文件
     anchors_files = [
-        f"{synteny_dir}/BH.CK.anchors",
-        f"{synteny_dir}/BH.TAU.anchors",
-        f"{synteny_dir}/CK.TAU.anchors",
+        f"{synteny_dir}/T01.T02.anchors",
+        f"{synteny_dir}/T01.C02.anchors",
+        f"{synteny_dir}/T02.C02.anchors",
     ]
     
     # 读取CDS文件
     cds_files = {
-        'BH': f"{jcvi_data_dir}/BH.cds",
-        'CK': f"{jcvi_data_dir}/CK.cds",
-        'TAU': f"{jcvi_data_dir}/TAU.cds",
+        'T01': f"{jcvi_data_dir}/T01.cds",
+        'T02': f"{jcvi_data_dir}/T02.cds",
+        'C02': f"{jcvi_data_dir}/C02.cds",
     }
     
     # 检查文件是否存在

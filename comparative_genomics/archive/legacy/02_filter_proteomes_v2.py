@@ -35,9 +35,9 @@ def parse_fasta(filename):
 def get_gene_id(seq_id):
     """从转录本ID提取基因ID"""
     # 去除物种前缀后处理
-    # BH_BH01G000001.1 -> BH_BH01G000001
-    # ATH_transcript:AT1G01010.1 -> ATH_transcript:AT1G01010
-    # TAU_evm.model.Chr01.1 -> TAU_evm.model.Chr01
+    # T01_T0101G000001.1 -> T01_T0101G000001
+    # O01_transcript:GENE00010.1 -> O01_transcript:GENE00010
+    # C02_evm.model.Chr01.1 -> C02_evm.model.Chr01
     
     # 使用正则匹配末尾的.数字模式
     match = re.match(r'^(.+)\.\d+$', seq_id)
@@ -121,8 +121,8 @@ def main():
     print("过滤蛋白质序列 v2")
     print("=" * 70)
     
-    species_list = ['BH', 'CK', 'TAU', 'TCH', 'RSO', 'CQU', 'GPA', 
-                    'APA', 'FMU', 'HAM', 'POL', 'DCA', 'SMO', 'ATH', 'VVI']
+    species_list = ['T01', 'T02', 'C02', 'C03', 'C01', 'C05', 'C07', 
+                    'C04', 'C08', 'C09', 'C10', 'C06', 'C11', 'O01', 'O02']
     
     all_stats = []
     

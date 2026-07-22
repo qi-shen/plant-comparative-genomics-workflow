@@ -89,7 +89,7 @@ ggsave(file.path(OUT_DIR, "CAFE_expansion_contraction_all_species.png"), p_cafe_
 # ============================================================
 cat("生成 CAFE 补充图2: 变化热图...\n")
 
-# 取BH列作为排序依据（按绝对值最大的家族排序）
+# 取T01列作为排序依据（按绝对值最大的家族排序）
 bh_col <- leaf_cols[leaf_names == "T01"]
 if (length(bh_col) > 0) {
   change_sig[, MaxAbsChange := apply(abs(.SD), 1, max, na.rm = TRUE),

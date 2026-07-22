@@ -6,27 +6,27 @@ SRC_DIR="${PROJECT_ROOT}/annotation"
 
 echo "开始准备交付包..."
 
-# 复制BH样本文件
-echo "整理BH样本文件..."
-cp "$SRC_DIR/T01/pasa_update/BH_pasa.pasa_assemblies.gff3" \
-   "$DELIVERY_DIR/T01/annotations/gff3/BH_pasa_updated.gff3"
-cp "$SRC_DIR/T01/pasa_update/BH_pasa.pasa_assemblies.gtf" \
-   "$DELIVERY_DIR/T01/annotations/gtf/BH_pasa_updated.gtf"
-cp "$SRC_DIR/T01/pasa_update/BH_pasa.assemblies.fasta" \
-   "$DELIVERY_DIR/T01/annotations/sequences/BH_pasa_assemblies.fasta"
-cp "$SRC_DIR/T01/pasa_update/BH_pasa_updated_filtered.pep.fa" \
-   "$DELIVERY_DIR/T01/annotations/proteins/BH_pasa_updated_proteins.faa"
+# 复制T01样本文件
+echo "整理T01样本文件..."
+cp "$SRC_DIR/T01/pasa_update/T01_pasa.pasa_assemblies.gff3" \
+   "$DELIVERY_DIR/T01/annotations/gff3/T01_pasa_updated.gff3"
+cp "$SRC_DIR/T01/pasa_update/T01_pasa.pasa_assemblies.gtf" \
+   "$DELIVERY_DIR/T01/annotations/gtf/T01_pasa_updated.gtf"
+cp "$SRC_DIR/T01/pasa_update/T01_pasa.assemblies.fasta" \
+   "$DELIVERY_DIR/T01/annotations/sequences/T01_pasa_assemblies.fasta"
+cp "$SRC_DIR/T01/pasa_update/T01_pasa_updated_filtered.pep.fa" \
+   "$DELIVERY_DIR/T01/annotations/proteins/T01_pasa_updated_proteins.faa"
 
-# 复制CK样本文件
-echo "整理CK样本文件..."
-cp "$SRC_DIR/T02/pasa_update/CK_pasa.pasa_assemblies.gff3" \
-   "$DELIVERY_DIR/T02/annotations/gff3/CK_pasa_updated.gff3"
-cp "$SRC_DIR/T02/pasa_update/CK_pasa.pasa_assemblies.gtf" \
-   "$DELIVERY_DIR/T02/annotations/gtf/CK_pasa_updated.gtf"
-cp "$SRC_DIR/T02/pasa_update/CK_pasa.assemblies.fasta" \
-   "$DELIVERY_DIR/T02/annotations/sequences/CK_pasa_assemblies.fasta"
-cp "$SRC_DIR/T02/pasa_update/CK_pasa_updated_filtered.pep.fa" \
-   "$DELIVERY_DIR/T02/annotations/proteins/CK_pasa_updated_proteins.faa"
+# 复制T02样本文件
+echo "整理T02样本文件..."
+cp "$SRC_DIR/T02/pasa_update/T02_pasa.pasa_assemblies.gff3" \
+   "$DELIVERY_DIR/T02/annotations/gff3/T02_pasa_updated.gff3"
+cp "$SRC_DIR/T02/pasa_update/T02_pasa.pasa_assemblies.gtf" \
+   "$DELIVERY_DIR/T02/annotations/gtf/T02_pasa_updated.gtf"
+cp "$SRC_DIR/T02/pasa_update/T02_pasa.assemblies.fasta" \
+   "$DELIVERY_DIR/T02/annotations/sequences/T02_pasa_assemblies.fasta"
+cp "$SRC_DIR/T02/pasa_update/T02_pasa_updated_filtered.pep.fa" \
+   "$DELIVERY_DIR/T02/annotations/proteins/T02_pasa_updated_proteins.faa"
 
 # 复制质量评估报告
 echo "复制质量评估报告..."
@@ -79,17 +79,17 @@ reports/
 文件说明:
 ==========================================
 
-BH样本:
-  - BH_pasa_updated.gff3          GFF3格式注释文件
-  - BH_pasa_updated.gtf           GTF格式注释文件
-  - BH_pasa_assemblies.fasta      转录本序列
-  - BH_pasa_updated_proteins.faa  蛋白质序列
+T01样本:
+  - T01_pasa_updated.gff3          GFF3格式注释文件
+  - T01_pasa_updated.gtf           GTF格式注释文件
+  - T01_pasa_assemblies.fasta      转录本序列
+  - T01_pasa_updated_proteins.faa  蛋白质序列
 
-CK样本:
-  - CK_pasa_updated.gff3          GFF3格式注释文件
-  - CK_pasa_updated.gtf           GTF格式注释文件
-  - CK_pasa_assemblies.fasta      转录本序列
-  - CK_pasa_updated_proteins.faa  蛋白质序列
+T02样本:
+  - T02_pasa_updated.gff3          GFF3格式注释文件
+  - T02_pasa_updated.gtf           GTF格式注释文件
+  - T02_pasa_assemblies.fasta      转录本序列
+  - T02_pasa_updated_proteins.faa  蛋白质序列
 
 EOF
 

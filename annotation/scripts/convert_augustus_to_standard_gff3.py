@@ -11,14 +11,14 @@ Chr01  AUGUSTUS  exon        27095  27563  .     -  .  Parent=g1.t1
 Chr01  AUGUSTUS  intron      27564  27880  1     -  .  Parent=g1.t1
 
 输出格式 (标准):
-Chr01  .  gene  27095  28911  .  -  .  ID=BH01G000100
-Chr01  .  mRNA  27095  28911  .  -  .  ID=BH01G000100.1;Parent=BH01G000100
-Chr01  .  exon  27095  27563  .  -  .  ID=BH01G000100.1.exon1;Parent=BH01G000100.1
-Chr01  .  CDS   27388  27563  .  -  2  ID=BH01G000100.1.cds1;Parent=BH01G000100.1
+Chr01  .  gene  27095  28911  .  -  .  ID=T0101G000100
+Chr01  .  mRNA  27095  28911  .  -  .  ID=T0101G000100.1;Parent=T0101G000100
+Chr01  .  exon  27095  27563  .  -  .  ID=T0101G000100.1.exon1;Parent=T0101G000100.1
+Chr01  .  CDS   27388  27563  .  -  2  ID=T0101G000100.1.cds1;Parent=T0101G000100.1
 
 基因ID命名规则:
-- BH01G000100: BH物种, 01染色体, G表示基因, 000100表示第1个基因(步长100)
-- CK01G000100: CK物种, 01染色体, G表示基因, 000100表示第1个基因(步长100)
+- T0101G000100: T01物种, 01染色体, G表示基因, 000100表示第1个基因(步长100)
+- T0201G000100: T02物种, 01染色体, G表示基因, 000100表示第1个基因(步长100)
 """
 
 import sys
@@ -155,7 +155,7 @@ def convert_augustus_gff3(input_file, output_file, species_prefix):
             
             for old_gene_id, gene_info in chr_genes[chr_name]:
                 gene_count += 1
-                # 新基因ID: BH01G000100 格式 (步长100)
+                # 新基因ID: T0101G000100 格式 (步长100)
                 new_gene_id = f"{species_prefix}{chr_num}G{gene_count * 100:06d}"
                 
                 # 写入gene行
@@ -206,7 +206,7 @@ def main():
     parser = argparse.ArgumentParser(description='将AUGUSTUS GFF3转换为标准格式')
     parser.add_argument('input', help='输入AUGUSTUS GFF3文件')
     parser.add_argument('output', help='输出标准GFF3文件')
-    parser.add_argument('-p', '--prefix', required=True, help='物种前缀 (如BH或CK)')
+    parser.add_argument('-p', '--prefix', required=True, help='物种前缀 (如T01或T02)')
     
     args = parser.parse_args()
     convert_augustus_gff3(args.input, args.output, args.prefix)

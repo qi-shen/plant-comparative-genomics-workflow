@@ -11,11 +11,11 @@ cat > "$REPORT_FILE" << 'EOF'
 
 ## 概述
 
-本报告总结了使用PASA (Program to Assemble Spliced Alignments) 对BH和CK样本进行注释更新的结果。
+本报告总结了使用PASA (Program to Assemble Spliced Alignments) 对T01和T02样本进行注释更新的结果。
 
 ## 1. 更新前后对比
 
-### BH样本
+### T01样本
 
 #### 原始注释
 - 基因数: 26,971
@@ -25,11 +25,11 @@ cat > "$REPORT_FILE" << 'EOF'
 - 组装转录本数: 29,223
 - GFF3注释行数: 201,523
 - 输出文件:
-  - GFF3: annotation/T01/pasa_update/BH_pasa.pasa_assemblies.gff3 (20MB)
-  - GTF: annotation/T01/pasa_update/BH_pasa.pasa_assemblies.gtf (27MB)
-  - 组装序列: annotation/T01/pasa_update/BH_pasa.assemblies.fasta (63MB)
+  - GFF3: annotation/T01/pasa_update/T01_pasa.pasa_assemblies.gff3 (20MB)
+  - GTF: annotation/T01/pasa_update/T01_pasa.pasa_assemblies.gtf (27MB)
+  - 组装序列: annotation/T01/pasa_update/T01_pasa.assemblies.fasta (63MB)
 
-### CK样本
+### T02样本
 
 #### 原始注释
 - 基因数: 26,771
@@ -39,9 +39,9 @@ cat > "$REPORT_FILE" << 'EOF'
 - 组装转录本数: 28,489
 - GFF3注释行数: 197,919
 - 输出文件:
-  - GFF3: annotation/T02/pasa_update/CK_pasa.pasa_assemblies.gff3 (20MB)
-  - GTF: annotation/T02/pasa_update/CK_pasa.pasa_assemblies.gtf (26MB)
-  - 组装序列: annotation/T02/pasa_update/CK_pasa.assemblies.fasta (61MB)
+  - GFF3: annotation/T02/pasa_update/T02_pasa.pasa_assemblies.gff3 (20MB)
+  - GTF: annotation/T02/pasa_update/T02_pasa.pasa_assemblies.gtf (26MB)
+  - 组装序列: annotation/T02/pasa_update/T02_pasa.assemblies.fasta (61MB)
 
 ## 2. BUSCO评估结果
 
@@ -88,17 +88,17 @@ PASA更新通过整合转录组证据，改进了基因注释的完整性：
 
 ## 4. 输出文件位置
 
-### BH样本
-- 更新后的注释GFF3: `annotation/T01/pasa_update/BH_pasa.pasa_assemblies.gff3`
-- 更新后的注释GTF: `annotation/T01/pasa_update/BH_pasa.pasa_assemblies.gtf`
-- 组装序列: `annotation/T01/pasa_update/BH_pasa.assemblies.fasta`
-- 更新后的蛋白质序列: `annotation/T01/pasa_update/BH_pasa_updated_filtered.pep.fa`
+### T01样本
+- 更新后的注释GFF3: `annotation/T01/pasa_update/T01_pasa.pasa_assemblies.gff3`
+- 更新后的注释GTF: `annotation/T01/pasa_update/T01_pasa.pasa_assemblies.gtf`
+- 组装序列: `annotation/T01/pasa_update/T01_pasa.assemblies.fasta`
+- 更新后的蛋白质序列: `annotation/T01/pasa_update/T01_pasa_updated_filtered.pep.fa`
 
-### CK样本
-- 更新后的注释GFF3: `annotation/T02/pasa_update/CK_pasa.pasa_assemblies.gff3`
-- 更新后的注释GTF: `annotation/T02/pasa_update/CK_pasa.pasa_assemblies.gtf`
-- 组装序列: `annotation/T02/pasa_update/CK_pasa.assemblies.fasta`
-- 更新后的蛋白质序列: `annotation/T02/pasa_update/CK_pasa_updated_filtered.pep.fa`
+### T02样本
+- 更新后的注释GFF3: `annotation/T02/pasa_update/T02_pasa.pasa_assemblies.gff3`
+- 更新后的注释GTF: `annotation/T02/pasa_update/T02_pasa.pasa_assemblies.gtf`
+- 组装序列: `annotation/T02/pasa_update/T02_pasa.assemblies.fasta`
+- 更新后的蛋白质序列: `annotation/T02/pasa_update/T02_pasa_updated_filtered.pep.fa`
 
 ## 5. 下一步建议
 
