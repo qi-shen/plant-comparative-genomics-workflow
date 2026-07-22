@@ -69,56 +69,45 @@ No shared `config/` consumption; no `lib/common.sh`; boilerplate and species tab
 
 Rule: **clean first, restructure second**; one commit per phase; always rollback-able.
 
-### Phase 0 — Freeze & inventory ✅ (this commit)
+### Phase 0 — Freeze & inventory ✅
 
 - [x] Tag `pre-refactor`
-- [x] Generate inventory / tree-diff / provisional decisions CSVs
-- [x] Publish this plan
+- [x] Inventory CSVs
+- [x] This plan
 
-### Phase 1 — Eliminate duplicate trees (high value, low risk)
+### Phase 1 — Eliminate duplicate trees ✅
 
-1. Diff/merge the 10 `DIVERGED` files into `comparative_genomics/scripts/`
-2. Delete `old_reults/comparative_genomics/`
-3. Point docs at the single path
+- [x] Treat `comparative_genomics/` as canonical
+- [x] Remove `old_reults/comparative_genomics/`
 
-### Phase 2 — Converge versions
+### Phase 2 — Converge versions ✅
 
-1. Pick winners per function family (esp. Ks/KaKs, filter, jcvi, wgd, cafe)
-2. Rename winners; move losers to `archive/`
-3. Move monitor helpers to `tools/` or archive
+- [x] Winners renamed to staged IDs
+- [x] Trials → `comparative_genomics/archive/legacy/`
+- [x] Monitors → `archive/ops/`
+- [x] Annotation scripts → `annotation/scripts/`
 
-Use `SCRIPT_DECISIONS.csv` (`provisional_decision`) as a starting point — confirm manually.
+### Phase 3 — Config + shared library ✅
 
-### Phase 3 — Config + shared library
+- [x] `config/species.csv`
+- [x] `lib/common.sh` + `lib/species.py`
+- [x] Config-driven `10_` / `11_` / `13_` entrypoints
 
-1. Add `config/species.csv`, `lib/common.sh`
-2. Make entry scripts read config
-3. Remove absolute path hard-coding
+### Phase 4 — Renumber + orchestration ✅
 
-### Phase 4 — Renumber + orchestration
+- [x] Stage prefixes `10_`–`94_`
+- [x] `run_all.sh` + `Makefile`
+- [x] Bilingual docs updated
 
-1. Apply stage prefixes
-2. Add `run_all.sh` / `Makefile`
-3. Update bilingual README/CLAUDE run order
+### Phase 5 — Privacy + docs close-out ✅
 
-### Phase 5 — Privacy + docs close-out
-
-1. Repo-wide anonymization pass
-2. Align bilingual docs with reality
-3. Add `docs/pipeline.md` data-flow notes
+- [x] Active-tree anonymization (archive keeps historical variants)
+- [x] `docs/pipeline.md`
 
 ---
 
-## 4. Risk control
+## 4. Rollback
 
-- One commit (or PR) per phase
-- Phases 1–2 are mostly file organization
-- Phase 3 changes logic — smoke-test on sample data
-- Rollback: `git checkout pre-refactor`
-
----
-
-## 5. Next step
-
-Recommended: **Phase 1** — merge 10 diverged files, then delete the duplicate tree.  
-Confirm before Phase 3+ (logic changes).
+```bash
+git checkout pre-refactor
+```

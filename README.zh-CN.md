@@ -2,112 +2,59 @@
 
 **语言：** [English](README.en.md) | [中文](README.zh-CN.md) · [首页](README.md)
 
-通用的**基因组注释 + 多物种比较基因组**流程仓库。只公开流程与脚本骨架，不包含真实物种名、拉丁名或原始数据。
+通用的**基因组注释 + 多物种比较基因组**流程。只跟踪**脚本、配置模板与文档**；不含原始基因组/转录组/OrthoFinder 大数据。公开内容仅使用样本编号（`T/C/O`）。
 
-本仓库默认只跟踪**脚本、文档与配置模板**；基因组、转录组、OrthoFinder 结果等大数据不入库。
+## 目录结构
 
-## 仓库包含什么
-
-| 路径 | 内容 |
+| 路径 | 作用 |
 |------|------|
-| `old_reults/scripts/` | 基因组注释流程（结构注释 / 功能注释 / EVM / PASA / BUSCO 等） |
-| `comparative_genomics/scripts/` | 比较基因组主流程（推荐使用，含出图 R 脚本） |
-| `old_reults/comparative_genomics/scripts/` | 比较基因组早期脚本备份 |
-| `old_reults/species_list.example.csv` | 物种编号占位表（自行复制并填本地路径） |
-| `CLAUDE.zh-CN.md` / `old_reults/AGENTS.zh-CN.md` | 流程约定与绘图规范 |
-| `.project_env.example` | 环境变量模板 |
+| `config/species.csv` | 物种→路径映射（本地修改） |
+| `lib/common.sh`, `lib/species.py` | 公共函数库 |
+| `annotation/scripts/` | 基因组注释流程 |
+| `comparative_genomics/scripts/` | 比较基因组（**唯一权威**，阶段编号 `10_`–`94_`） |
+| `comparative_genomics/archive/` | 已收敛的历史试错脚本 |
+| `run_all.sh` / `Makefile` | 一键编排 |
+| `docs/pipeline.md` | 数据流图 |
+| `docs/REFACTOR_PLAN.*.md` | 重构说明 |
 
 ## 快速开始
-
-### 1. 克隆
 
 ```bash
 git clone https://github.com/qi-shen/plant-comparative-genomics-workflow.git
 cd plant-comparative-genomics-workflow
-```
-
-### 2. 准备数据目录（不进 Git）
-
-```bash
-cp old_reults/species_list.example.csv old_reults/species_list.csv
-# 编辑 species_list.csv：只写你自己的目录路径，勿把真实种名提交回公开仓库
-```
-
-建议结构：
-
-```text
-project_root/
-├── old_reults/
-│   ├── results/                 # 各物种基因组 / 注释 / 蛋白
-│   ├── rna_rawdata/             # 转录组原始数据（可选）
-│   ├── scripts/
-│   ├── annotation/
-│   └── logs/
-├── comparative_genomics/
-│   ├── scripts/
-│   ├── 01_proteomes/            # 运行后生成
-│   ├── 02_orthofinder_results*/ # 运行后生成
-│   └── ...
-└── new_anno/                    # 最终注释交付（可选）
-```
-
-### 3. 配置环境变量
-
-```bash
 cp .project_env.example .project_env
-# 编辑 PROJECT_ROOT 与目标种基因组路径
+# 编辑 .project_env 与 config/species.csv
 source .project_env
+
+./run_all.sh list
+make orthology          # 或 ./run_all.sh orthology
 ```
 
-或：
+### 注释（目标种）
 
 ```bash
-bash old_reults/init_project.sh
-source .project_env
-```
-
-### 4. 软件依赖（conda 优先）
-
-- 注释：Augustus, GeneMark, GeMoMa, EVM, PASA, RepeatMasker/RepeatModeler, BUSCO, eggNOG-mapper, DIAMOND
-- 比较基因组：OrthoFinder, MAFFT, IQ-TREE / RAxML, JCVI, CAFE5, PAML(CodeML), KaKs_Calculator, Circos
-- 绘图：R（ggplot2, ggtree 等）
-
-规范见 `old_reults/AGENTS.zh-CN.md`。
-
-## 推荐复跑顺序
-
-### A. 基因组注释（目标种）
-
-```bash
-cd old_reults
+cd annotation
 bash scripts/structure_annotation.sh
 bash scripts/functional_annotation_main.sh
 bash scripts/run_evm_v3.sh
 bash scripts/run_pasa_update.sh
 ```
 
-### B. 比较基因组
+### 比较基因组（推荐顺序）
 
-```bash
-cd comparative_genomics
-bash scripts/01_prepare_proteomes.sh
-bash scripts/03_run_orthofinder.sh
-bash scripts/14_extract_single_copy_genes.sh
-bash scripts/12_run_phylogeny.sh
-bash scripts/05_run_wgd_analysis.sh
-bash scripts/06_run_jcvi_synteny.sh
-bash scripts/18_run_paml_selection.sh
-bash scripts/22_run_codeml_batch.sh
-bash scripts/13_run_cafe_v2.sh
-```
+| 阶段 | 脚本 |
+|------|------|
+| 同源 | `10_prepare_proteomes.sh` → `11_filter_proteomes.py` → `13_run_orthofinder.sh` → `14_extract_single_copy_genes.sh` |
+| 系统发育 | `20_run_phylogeny.sh` |
+| WGD / Ks | `30_run_wgd_analysis.sh` → `31_calculate_ks.py` |
+| 共线性 | `40_prepare_synteny_data.py` → `41_run_jcvi_synteny.sh` |
+| 正选择 | `50_prepare_selection.sh` → `51_run_paml_selection.sh` → `52_run_codeml_batch.sh` |
+| CAFE | `60_run_cafe.sh` → `61_parse_cafe_results.py` |
+| 出图 | `70_run_circos.sh` → `71_`–`79_` R 脚本 |
 
-复用到自己的数据时，优先改：
+或直接：`./run_all.sh all`
 
-1. `.project_env` / `species_list.csv`
-2. `01_prepare_proteomes.sh` 中的输入映射
-3. 下游脚本里写死的样本前缀（默认示例为 T01/T02）
-
-## 样本编号约定（占位）
+## 样本编号
 
 | 编号 | 角色 |
 |------|------|
@@ -115,21 +62,18 @@ bash scripts/13_run_cafe_v2.sh
 | C01–C11 | 比较物种 |
 | O01–O02 | 外群 |
 
-公开仓库中请只保留编号与相对路径，**不要**提交中文名、拉丁名或可识别目录名。
+真实文件名只写在本地 `config/species.csv` / `.project_env`。
+
+## 软件依赖（优先 conda）
+
+注释：Augustus, GeneMark, GeMoMa, EVM, PASA, RepeatMasker, BUSCO, eggNOG-mapper, DIAMOND  
+比较：OrthoFinder, MAFFT, IQ-TREE/RAxML, JCVI, CAFE5, PAML, KaKs_Calculator, Circos  
+绘图：R（ggplot2, ggtree）
 
 ## 隐私
 
-- 真实物种对照表、原始路径、项目计划等放在本地，勿推送到公开远程。
-- `.project_env`、`species_list.csv`（若含真实信息）已被 `.gitignore` 忽略。
-- 需要分享时，只分享本流程仓库；数据与结果单独传输。
-
-## 相关文档
-
-- [docs/REFACTOR_PLAN.zh-CN.md](docs/REFACTOR_PLAN.zh-CN.md) — 重构诊断与分阶段计划
-- [CLAUDE.zh-CN.md](CLAUDE.zh-CN.md) — 命令速查
-- [old_reults/README_INIT.zh-CN.md](old_reults/README_INIT.zh-CN.md) — 初始化
-- [old_reults/AGENTS.zh-CN.md](old_reults/AGENTS.zh-CN.md) — 编码与绘图规范
+公开仓库只用编号与中性路径；勿提交真实种名或本机绝对路径。
 
 ## License
 
-未单独声明许可证时，仅供合作方内部复用流程；公开分发前请补全 License。
+公开分发前请补全 License；默认供合作方复用流程。

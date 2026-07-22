@@ -2,9 +2,14 @@
 # 提取单拷贝同源基因用于系统发育分析
 # 日期: 2024-12-29
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck disable=SC1091
+source "${SCRIPT_DIR}/../../lib/common.sh"
+wf_init
+
 set -e
 
-BASE_DIR="/path/to/project_root"
+BASE_DIR="${PROJECT_ROOT}"
 WORK_DIR="$BASE_DIR/comparative_genomics/03_phylogeny"
 OF_DIR="$BASE_DIR/comparative_genomics/02_orthofinder_results/Results_Dec29/WorkingDirectory/OrthoFinder/Results_Dec29_1"
 

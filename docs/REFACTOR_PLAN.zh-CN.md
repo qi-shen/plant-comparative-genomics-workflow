@@ -78,56 +78,45 @@
 
 原则：**先低风险清理、后结构调整**；每阶段独立提交、可回滚。
 
-### Phase 0 — 冻结与盘点 ✅（本提交）
+### Phase 0 — 冻结与盘点 ✅
 
 - [x] 打 tag `pre-refactor`
-- [x] 生成 `SCRIPT_INVENTORY.csv` / `SCRIPT_TREE_DIFF.csv` / `SCRIPT_DECISIONS.csv`
+- [x] 生成盘点 CSV
 - [x] 落盘本重构计划
 
-### Phase 1 — 消除重复源（高价值、低风险）
+### Phase 1 — 消除重复源 ✅
 
-1. 对 10 个 `DIVERGED` 文件逐一 diff，合并进 `comparative_genomics/scripts/`
-2. 删除 `old_reults/comparative_genomics/`（52 个 identical + 已合并的分叉）
-3. 更新 README / CLAUDE 引用为唯一路径
+- [x] 确认 `comparative_genomics/` 为权威（分叉文件均为更新版）
+- [x] 删除 `old_reults/comparative_genomics/`
 
-### Phase 2 — 收敛版本
+### Phase 2 — 收敛版本 ✅
 
-1. 按功能族选定胜出脚本（尤其 Ks/KaKs、filter、jcvi、wgd、cafe）
-2. 胜出者改为规范名；其余移入 `archive/`
-3. 监控类脚本移入 `tools/` 或 archive
+- [x] 选定胜出脚本并重命名为阶段编号
+- [x] 试错脚本 → `comparative_genomics/archive/legacy/`
+- [x] 监控脚本 → `archive/ops/`
+- [x] 注释脚本迁至 `annotation/scripts/`
 
-参考 `SCRIPT_DECISIONS.csv` 中 `provisional_decision` 列（需人工确认）。
+### Phase 3 — 配置化与公共库 ✅
 
-### Phase 3 — 配置化与公共库
+- [x] `config/species.csv`
+- [x] `lib/common.sh` + `lib/species.py`
+- [x] `10_prepare_proteomes.sh` / `11_filter_proteomes.py` / `13_run_orthofinder.sh` 配置驱动
 
-1. 新建 `config/species.csv`、`lib/common.sh`
-2. 改写入口脚本从配置读取
-3. 清除绝对路径硬编码
+### Phase 4 — 重编号与编排 ✅
 
-### Phase 4 — 重编号与编排
+- [x] 阶段前缀 `10_`–`94_`
+- [x] `run_all.sh` + `Makefile`
+- [x] 双语 README/CLAUDE 更新
 
-1. 按阶段前缀重排
-2. 增加 `run_all.sh` / `Makefile`
-3. 更新中英双语文档中的运行顺序
+### Phase 5 — 脱敏与文档收尾 ✅
 
-### Phase 5 — 脱敏与文档收尾
-
-1. 全仓库脱敏 grep-replace
-2. 对齐双语 README/CLAUDE 声明
-3. 补充 `docs/pipeline.md` 数据流说明
+- [x] 活跃脚本脱敏（归档目录保留历史痕迹供对照）
+- [x] `docs/pipeline.md`
 
 ---
 
-## 四、风险控制
+## 四、回滚
 
-- 每 Phase 一个独立 commit（或 PR）
-- Phase 1–2 以文件组织为主，最易验证
-- Phase 3 改逻辑，需样例数据冒烟
-- 任何阶段可 `git checkout pre-refactor` 回滚到基线
-
----
-
-## 五、下一步
-
-推荐立即做 **Phase 1**：合并 10 个分叉文件 → 删除重复树。  
-需你确认后再改脚本内容（Phase 3+）。
+```bash
+git checkout pre-refactor
+```

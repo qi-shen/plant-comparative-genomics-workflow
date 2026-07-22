@@ -1,0 +1,16 @@
+id,role,prefix,pep_path,cds_path,gff_path,note
+T01,target,T01,new_anno/T01.final.pep.fa,new_anno/T01.final.cds.fa,new_anno/T01.final.gff3,target sample 1
+T02,target,T02,new_anno/T02.final.pep.fa,new_anno/T02.final.cds.fa,new_anno/T02.final.gff3,target sample 2
+C01,comparative,C01,old_reults/results/comp/C01/protein.fa,old_reults/results/comp/C01/cds.fa,old_reults/results/comp/C01/genes.gff3,comparative
+C02,comparative,C02,old_reults/results/comp/C02/protein.fa,old_reults/results/comp/C02/cds.fa,old_reults/results/comp/C02/genes.gff3,comparative
+C03,comparative,C03,old_reults/results/comp/C03/protein.fa,old_reults/results/comp/C03/cds.fa,old_reults/results/comp/C03/genes.gff3,comparative
+C04,comparative,C04,old_reults/results/comp/C04/protein.fa,old_reults/results/comp/C04/cds.fa,old_reults/results/comp/C04/genes.gff3,comparative
+C05,comparative,C05,old_reults/results/comp/C05/protein.fa,old_reults/results/comp/C05/cds.fa,old_reults/results/comp/C05/genes.gff3,comparative
+C06,comparative,C06,old_reults/results/comp/C06/protein.fa,old_reults/results/comp/C06/cds.fa,old_reults/results/comp/C06/genes.gff3,comparative
+C07,comparative,C07,old_reults/results/comp/C07/protein.fa,old_reults/results/comp/C07/cds.fa,old_reults/results/comp/C07/genes.gff3,comparative
+C08,comparative,C08,old_reults/results/comp/C08/protein.fa,old_reults/results/comp/C08/cds.fa,old_reults/results/comp/C08/genes.gff3,comparative
+C09,comparative,C09,old_reults/results/comp/C09/protein.fa,old_reults/results/comp/C09/cds.fa,old_reults/results/comp/C09/genes.gff3,comparative
+C10,comparative,C10,old_reults/results/comp/C10/protein.fa,old_reults/results/comp/C10/cds.fa,old_reults/results/comp/C10/genes.gff3,comparative
+C11,comparative,C11,old_reults/results/comp/C11/protein.fa,old_reults/results/comp/C11/cds.fa,old_reults/results/comp/C11/genes.gff3,comparative
+O01,outgroup,O01,old_reults/results/outgroup/O01/protein.fa,old_reults/results/outgroup/O01/cds.fa,old_reults/results/outgroup/O01/genes.gff3,outgroup
+O02,outgroup,O02,old_reults/results/outgroup/O02/protein.fa,old_reults/results/outgroup/O02/cds.fa,old_reults/results/outgroup/O02/genes.gff3,outgroup

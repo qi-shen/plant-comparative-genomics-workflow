@@ -1,16 +1,16 @@
 id,role,note,path
-T01,target,fill local label if needed,results/targets/T01/
-T02,target,fill local label if needed,results/targets/T02/
-C01,comparative,,results/comp/C01/
-C02,comparative,,results/comp/C02/
-C03,comparative,,results/comp/C03/
-C04,comparative,,results/comp/C04/
-C05,comparative,,results/comp/C05/
-C06,comparative,,results/comp/C06/
-C07,comparative,,results/comp/C07/
-C08,comparative,,results/comp/C08/
-C09,comparative,,results/comp/C09/
-C10,comparative,,results/comp/C10/
-C11,comparative,,results/comp/C11/
-O01,outgroup,,results/outgroup/O01/
-O02,outgroup,,results/outgroup/O02/
+T01,target,see config/species.csv,results/targets/T01/
+T02,target,see config/species.csv,results/targets/T02/
+C01,comparative,see config/species.csv,results/comp/C01/
+C02,comparative,see config/species.csv,results/comp/C02/
+C03,comparative,see config/species.csv,results/comp/C03/
+C04,comparative,see config/species.csv,results/comp/C04/
+C05,comparative,see config/species.csv,results/comp/C05/
+C06,comparative,see config/species.csv,results/comp/C06/
+C07,comparative,see config/species.csv,results/comp/C07/
+C08,comparative,see config/species.csv,results/comp/C08/
+C09,comparative,see config/species.csv,results/comp/C09/
+C10,comparative,see config/species.csv,results/comp/C10/
+C11,comparative,see config/species.csv,results/comp/C11/
+O01,outgroup,see config/species.csv,results/outgroup/O01/
+O02,outgroup,see config/species.csv,results/outgroup/O02/

@@ -17,6 +17,8 @@ CLAUDE.local.md
 old_reults/PROJECT_STATUS.md
 old_reults/plant_revised.md
 **/Tamarix_Comparative_Genomics_Results/
+**/Comparative_Genomics_Results/
+config/species.local.csv
 
 # --- 操作系统 / 编辑器 ---
 .DS_Store
